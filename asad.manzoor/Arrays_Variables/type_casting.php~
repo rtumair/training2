@@ -1,0 +1,9 @@
+<?php
+
+$array = array(
+    "asad" => "asad",
+    "ali" => "ali",
+    10   => -10,
+    -500  => 500,
+);
+var_dump($array);
