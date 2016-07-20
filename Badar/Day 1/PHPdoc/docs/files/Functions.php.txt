@@ -1,0 +1,35 @@
+<?php
+namespace vendor;
+
+// Class declartion
+class Arithemetic
+{
+   
+    // method declaration
+    public function add($x, $y)
+    {
+        return $x+$y;
+    }
+    public function subtract($x, $y)
+    {
+        if ($x>$y) {
+            return $x-$y;
+        } else {
+            return $y-$x;
+        }
+
+    }
+    public function multiply($x, $y)
+    {
+        return $x*$y;
+    }
+    public function divide($x, $y)
+    {
+        if ($x>$y) {
+            return $x/$y;
+        } else {
+            return $y/$x;
+        }
+    }
+}
+

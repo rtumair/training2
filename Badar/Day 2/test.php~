@@ -1,0 +1,19 @@
+<?php
+use PHPUnit\Framework\TestCase;
+require_once 'PHPUnit/Autoload.php';
+
+class Test extends TestCase
+{
+    public function testaddition()
+    {
+        // Arrange
+        $obj = new Arithemetic();
+
+        // Assert
+        $this->assertEquals(1, $b->add(0,1));
+        $this->assertEquals(2, $b->add(1,1));
+        $this->assertEquals(7, $b->add(5,2));
+        $this->assertEquals(5, $b->add(4,1));
+    }
+
+}
