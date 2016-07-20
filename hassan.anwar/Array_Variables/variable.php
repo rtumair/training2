@@ -1,0 +1,31 @@
+<?php
+
+$a = 'hello';
+echo $a."<br>";
+
+$$a = 'world';
+echo $$a."<br>";
+
+//combine display
+echo "$a ${$a}"."<br>";
+echo "$a $hello"."<br>";
+
+//class implementation
+class foo {
+   var $bar = 'I am bar.';
+   var $arr = array('I am A.', 'I am B.', 'I am C.');
+   var $r   = 'I am r.';
+}
+
+$foo = new foo();
+$bar = 'bar';
+$baz = array('foo', 'bar', 'baz', 'quux');
+echo $foo->$bar . "<br>";
+echo $foo->{$baz[1]} . "<br>";
+
+$start = 'b';
+$end   = 'ar';
+echo $foo->{$start . $end} . "<br>";
+
+$arr = 'arr';
+echo $foo->{$arr[1]} . "<br>";
