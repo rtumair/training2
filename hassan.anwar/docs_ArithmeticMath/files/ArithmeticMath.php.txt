@@ -1,0 +1,52 @@
+<?php
+namespace ArithmeticMathTest;
+
+class ArithmeticMath
+{
+  
+    // method declaration
+    public function add($var1, $var2)
+    {
+        if (is_numeric($var1) && is_numeric($var2)) {
+            return $var1 + $var2;
+        } elseif (!is_numeric($var1)) {
+            echo "$var1 is an invalid value";
+        } else {
+            echo "$var2 is an invalid value";
+        }
+    }
+
+    public function subtract($var1, $var2)
+    {
+        if (is_numeric($var1) && is_numeric($var2)) {
+            return $var1 - $var2;
+        } elseif (!is_numeric($var1)) {
+            echo "$var1 is an invalid value";
+        } else {
+            echo "$var2 is an invalid value";
+        }
+    }
+
+    public function multiply($var1, $var2)
+    {
+        if (is_numeric($var1) && is_numeric($var2)) {
+            return $var1 * $var2;
+        } elseif (!is_numeric($var1)) {
+            echo "$var1 is an invalid value";
+        } else {
+            echo "$var2 is an invalid value";
+        }
+    }
+
+    public function divide($var1, $var2)
+    {
+        if (is_numeric($var1) && is_numeric($var2)) {
+            return $var1 / $var2;
+        } elseif (!is_numeric($var1)) {
+            echo "$var1 is an invalid value";
+        } else {
+            echo "$var2 is an invalid value";
+        }
+    }
+}
+
