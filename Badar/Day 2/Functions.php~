@@ -1,0 +1,61 @@
+<?php
+namespace vendor;
+
+// Class declartion
+/**
+ * Class Arithemetic
+ * @package vendor
+ */
+class Arithemetic
+{
+   
+    // method declaration
+    /**
+     * @param $x
+     * @param $y
+     * @return mixed
+     */
+    public function add($x, $y)
+    {
+        return $x+$y;
+    }
+
+    /**
+     * @param $x
+     * @param $y
+     * @return mixed
+     */
+    public function subtract($x, $y)
+    {
+        if ($x>$y) {
+            return $x-$y;
+        } else {
+            return $y-$x;
+        }
+
+    }
+
+    /**
+     * @param $x
+     * @param $y
+     * @return mixed
+     */
+    public function multiply($x, $y)
+    {
+        return $x*$y;
+    }
+
+    /**
+     * @param $x
+     * @param $y
+     * @return float
+     */
+    public function divide($x, $y)
+    {
+        if ($x>$y) {
+            return $x/$y;
+        } else {
+            return $y/$x;
+        }
+    }
+}
