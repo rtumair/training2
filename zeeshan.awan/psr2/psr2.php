@@ -1,0 +1,12 @@
+<?php
+
+$counter = 0;
+
+while ($counter != 10) {
+    if ($counter % 2 == 0) {
+        echo "hello even " . $counter . "\n";
+    } else {
+        echo "hello odd " . $counter . "\n";
+    }
+    $counter++;
+}
