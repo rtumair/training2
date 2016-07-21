@@ -1,0 +1,20 @@
+<?php
+
+namespace TEST
+
+class Test
+{
+    public function fooDisplay()
+    {
+        public $foo = 10;
+        while ($foo != 0) {
+            echo $foo--;
+            if ($foo === 5) {
+                echo "five";
+            } 
+        }
+    }
+}
+
+$data = new Test();
+$data->fooDisplay();
