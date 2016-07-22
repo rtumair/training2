@@ -1,3 +1,26 @@
+<?php
+/* Smarty version 3.1.29, created on 2016-07-22 12:53:38
+  from "/var/www/html/MVC/app/views/viewusers.tpl" */
+
+if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
+  'has_nocache_code' => false,
+  'version' => '3.1.29',
+  'unifunc' => 'content_579217520b7c93_04541835',
+  'file_dependency' => 
+  array (
+    'e5198edac180a1c8484f143b7b64afa7137db015' => 
+    array (
+      0 => '/var/www/html/MVC/app/views/viewusers.tpl',
+      1 => 1469192017,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_579217520b7c93_04541835 ($_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,8 +55,12 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <?php echo '<script'; ?>
+ src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"><?php echo '</script'; ?>
+>
     <![endif]-->
 
 </head>
@@ -109,51 +136,73 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {foreach from=$tabledata item=row}
+                                    <?php
+$_from = $_smarty_tpl->tpl_vars['tabledata']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$__foreach_row_0_saved_item = isset($_smarty_tpl->tpl_vars['row']) ? $_smarty_tpl->tpl_vars['row'] : false;
+$_smarty_tpl->tpl_vars['row'] = new Smarty_Variable();
+$_smarty_tpl->tpl_vars['row']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['row']->value) {
+$_smarty_tpl->tpl_vars['row']->_loop = true;
+$__foreach_row_0_saved_local_item = $_smarty_tpl->tpl_vars['row'];
+?>
                                         <tr>
-                                            <td align="left"> {$row['user_id']} </td>
-                                            <td align="left"> {$row['user_name']} </td>
-                                            <td align="left"> {$row['user_email']} </td>
+                                            <td align="left"> <?php echo $_smarty_tpl->tpl_vars['row']->value['user_id'];?>
+ </td>
+                                            <td align="left"> <?php echo $_smarty_tpl->tpl_vars['row']->value['user_name'];?>
+ </td>
+                                            <td align="left"> <?php echo $_smarty_tpl->tpl_vars['row']->value['user_email'];?>
+ </td>
                                             <td align="left"><form action="usercrud/index" method = "GET">
-                                                    <input type="hidden" name = "rowID" value = "{$row['user_id']}">
+                                                    <input type="hidden" name = "rowID" value = "<?php echo $_smarty_tpl->tpl_vars['row']->value['user_id'];?>
+">
                                                     <input type="submit" name = "update" value ="Update"/></form></td>
                                             <td align="left"> <form action="usercrud/delete_a_user" method = "GET">
-                                                    <input type="hidden" name = "rowID" value = "{$row['user_id']}">
+                                                    <input type="hidden" name = "rowID" value = "<?php echo $_smarty_tpl->tpl_vars['row']->value['user_id'];?>
+">
                                                     <input type="submit" name="delete" value ="Delete"/></form></td>
                                         </tr>
-                                    {/foreach}
+                                    <?php
+$_smarty_tpl->tpl_vars['row'] = $__foreach_row_0_saved_local_item;
+}
+if ($__foreach_row_0_saved_item) {
+$_smarty_tpl->tpl_vars['row'] = $__foreach_row_0_saved_item;
+}
+?>
                                 <tbody>
                             </table>
-                            {*<table class="table table-hover">*}
-                                {*<thead>*}
-                                {*<tr>*}
-                                    {*<th>#</th>*}
-                                    {*<th>First Name</th>*}
-                                    {*<th>Last Name</th>*}
-                                    {*<th>Username</th>*}
-                                {*</tr>*}
-                                {*</thead>*}
-                                {*<tbody>*}
-                                {*<tr>*}
-                                    {*<td>1</td>*}
-                                    {*<td>Mark</td>*}
-                                    {*<td>Otto</td>*}
-                                    {*<td>@mdo</td>*}
-                                {*</tr>*}
-                                {*<tr>*}
-                                    {*<td>2</td>*}
-                                    {*<td>Jacob</td>*}
-                                    {*<td>Thornton</td>*}
-                                    {*<td>@fat</td>*}
-                                {*</tr>*}
-                                {*<tr>*}
-                                    {*<td>3</td>*}
-                                    {*<td>Larry</td>*}
-                                    {*<td>the Bird</td>*}
-                                    {*<td>@twitter</td>*}
-                                {*</tr>*}
-                                {*</tbody>*}
-                            {*</table>*}
+                            
+                                
+                                
+                                    
+                                    
+                                    
+                                    
+                                
+                                
+                                
+                                
+                                    
+                                    
+                                    
+                                    
+                                
+                                
+                                    
+                                    
+                                    
+                                    
+                                
+                                
+                                    
+                                    
+                                    
+                                    
+                                
+                                
+                            
                         </div>
                         <!-- /.table-responsive -->
                     </div>
@@ -170,30 +219,46 @@
 <!-- /#wrapper -->
 
 <!-- jQuery -->
-<script src="/MVC/app/lib/sb-admin-clean/bower_components/jquery/dist/jquery.min.js"></script>
+<?php echo '<script'; ?>
+ src="/MVC/app/lib/sb-admin-clean/bower_components/jquery/dist/jquery.min.js"><?php echo '</script'; ?>
+>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="/MVC/app/lib/sb-admin-clean/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<?php echo '<script'; ?>
+ src="/MVC/app/lib/sb-admin-clean/bower_components/bootstrap/dist/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
 
 <!-- Metis Menu Plugin JavaScript -->
-<script src="/MVC/app/lib/sb-admin-clean/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+<?php echo '<script'; ?>
+ src="/MVC/app/lib/sb-admin-clean/bower_components/metisMenu/dist/metisMenu.min.js"><?php echo '</script'; ?>
+>
 
 <!-- DataTables JavaScript -->
-<script src="/MVC/app/lib/sb-admin-clean/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
-<script src="/MVC/app/lib/sb-admin-clean/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+<?php echo '<script'; ?>
+ src="/MVC/app/lib/sb-admin-clean/bower_components/datatables/media/js/jquery.dataTables.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="/MVC/app/lib/sb-admin-clean/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"><?php echo '</script'; ?>
+>
 
 <!-- Custom Theme JavaScript -->
-<script src="/MVC/app/lib/sb-admin-clean/dist/js/sb-admin-2.js"></script>
+<?php echo '<script'; ?>
+ src="/MVC/app/lib/sb-admin-clean/dist/js/sb-admin-2.js"><?php echo '</script'; ?>
+>
 
 <!-- Page-Level Demo Scripts - Tables - Use for reference -->
-<script>
+<?php echo '<script'; ?>
+>
     $(document).ready(function() {
         $('#dataTables-example').DataTable({
             responsive: true
         });
     });
-</script>
+<?php echo '</script'; ?>
+>
 
 </body>
 
 </html>
+<?php }
+}

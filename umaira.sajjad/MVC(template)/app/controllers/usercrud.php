@@ -22,21 +22,35 @@ class Usercrud extends Controller
 
     public function index()
     {
-        // echo 'Inside AddUser index Controller';
-        $smarty = new Smarty();
+      //  echo 'Inside AddUser index Controller';
 
-        if(isset($_POST['add']))
-        {
-            $smarty->display('../app/views/adduser.tpl');
-        }
-        else if(isset($_GET['update']))
-        {
-            $smarty->assign('rowID', $_GET['rowID']);
-            $smarty->display('../app/views/updateuser.tpl' );
-        }
+//
+//        if(isset($_GET['adduser']))
+//        {
+//            echo 'Inside AddUser index Controller';
+//
+//            $smarty->display('../app/views/adduser.tpl');
+//        }
+//        else if(isset($_GET['updateuser']))
+//        {
+//            $smarty->assign('rowID', $_GET['rowID']);
+//            $smarty->display('../app/views/updateuser.tpl' );
+//        }
+    }
+    public function adduser()
+    {
+        $smarty = new Smarty();
+        $smarty->display('../app/views/adduser.tpl');
+
+    }
+    public function viewuser()
+    {
+        $smarty = new Smarty();
+        $smarty->display('../app/views/viewusers.tpl');
+
     }
 
-    public function logout()
+        public function logout()
     {
       session_destroy();
         header('Location: http://localhost/MVC/public');
@@ -95,8 +109,7 @@ class Usercrud extends Controller
     public function add_a_user()
     {
         if(isset($_POST['submit']))
-        {
-
+        { 
             $data_missing = array();
 
             if(empty($_POST['u_name'])){
@@ -119,7 +132,6 @@ class Usercrud extends Controller
 
             if(empty($data_missing))
             {
-
                 $is_successful = $this->user->create([
                     'username' => $u_name,
                     'password' => $u_pass,

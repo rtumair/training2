@@ -33,6 +33,7 @@ class Home extends Controller
         if (empty($_SESSION['login_user'])) {
             $smarty->display('../app/views/home/login.tpl' );
         } else {
+//            echo 'XXXXXXXX';
             $smarty->display('../app/views/home/index.tpl' );
         }
     }

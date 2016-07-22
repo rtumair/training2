@@ -85,12 +85,12 @@
                         <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                     </li>
                     <li>
-                        <input class="btn btn-lg btn-success btn-block" type = "submit" name= "login" value="Login" />
+                        {*<input class="btn btn-lg btn-success btn-block" type = "submit" name= "login" value= />*}
 
-                        <a href="/MVC/public/usercrud/index"><i class="fa fa-dashboard fa-fw"></i> Add User</a>
+                        <a href="/MVC/public/usercrud/adduser"> <i class="fa fa-dashboard fa-fw"></i> Add User</a>
                     </li> 
                      <li>                        
-                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> View Users</a>
+                        <a href="/MVC/public/usercrud/viewuser" ><i class="fa fa-dashboard fa-fw"></i> View Users</a>
                     </li> 
                 </ul>
             </div>

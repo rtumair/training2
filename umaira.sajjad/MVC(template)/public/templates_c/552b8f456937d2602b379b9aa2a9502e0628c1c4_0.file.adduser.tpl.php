@@ -1,3 +1,26 @@
+<?php
+/* Smarty version 3.1.29, created on 2016-07-22 12:16:09
+  from "/var/www/html/MVC/app/views/adduser.tpl" */
+
+if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
+  'has_nocache_code' => false,
+  'version' => '3.1.29',
+  'unifunc' => 'content_57920e894bbe44_82524398',
+  'file_dependency' => 
+  array (
+    '552b8f456937d2602b379b9aa2a9502e0628c1c4' => 
+    array (
+      0 => '/var/www/html/MVC/app/views/adduser.tpl',
+      1 => 1469189767,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_57920e894bbe44_82524398 ($_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,8 +49,12 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <?php echo '<script'; ?>
+ src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"><?php echo '</script'; ?>
+>
     <![endif]-->
 
 </head>
@@ -133,17 +160,27 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="/MVC/app/lib/sb-admin-clean/bower_components/jquery/dist/jquery.min.js"></script>
+    <?php echo '<script'; ?>
+ src="/MVC/app/lib/sb-admin-clean/bower_components/jquery/dist/jquery.min.js"><?php echo '</script'; ?>
+>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="/MVC/app/lib/sb-admin-clean/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <?php echo '<script'; ?>
+ src="/MVC/app/lib/sb-admin-clean/bower_components/bootstrap/dist/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="/MVC/app/lib/sb-admin-clean/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <?php echo '<script'; ?>
+ src="/MVC/app/lib/sb-admin-clean/bower_components/metisMenu/dist/metisMenu.min.js"><?php echo '</script'; ?>
+>
 
     <!-- Custom Theme JavaScript -->
-    <script src="/MVC/app/lib/sb-admin-clean/dist/js/sb-admin-2.js"></script>
+    <?php echo '<script'; ?>
+ src="/MVC/app/lib/sb-admin-clean/dist/js/sb-admin-2.js"><?php echo '</script'; ?>
+>
 
 </body>
 
 </html>
+<?php }
+}
