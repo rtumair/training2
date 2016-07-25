@@ -12,6 +12,8 @@ ini_set('display_errors', 1);
 class Home extends Controller 
 {
     protected $user;
+    protected $smarty;
+
     public function __construct()
     {
         $this->user = $this->model('User');
@@ -33,7 +35,6 @@ class Home extends Controller
         if (empty($_SESSION['login_user'])) {
             $smarty->display('../app/views/home/login.tpl' );
         } else {
-//            echo 'XXXXXXXX';
             $smarty->display('../app/views/home/index.tpl' );
         }
     }

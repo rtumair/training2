@@ -12,12 +12,15 @@ ini_set('display_errors', 1);
 class Usercrud extends Controller
 {
     protected $user;
+    protected $smarty;
 
     public function __construct()
     {
         session_start();
 
         $this->user = $this->model('User');
+      //   $this->smarty = new SmartyApp();
+
     }
 
     public function index()
@@ -36,6 +39,11 @@ class Usercrud extends Controller
 //            $smarty->assign('rowID', $_GET['rowID']);
 //            $smarty->display('../app/views/updateuser.tpl' );
 //        }
+
+
+        $smarty = new Smarty();
+        $smarty->assign('rowID', $_GET['rowID']);
+        $smarty->display('../app/views/updateuser.tpl' );
     }
     public function adduser()
     {
@@ -46,6 +54,7 @@ class Usercrud extends Controller
     public function viewuser()
     {
         $smarty = new Smarty();
+        $smarty -> assign('tabledata', $this->user->viewAll());
         $smarty->display('../app/views/viewusers.tpl');
 
     }
@@ -160,7 +169,9 @@ class Usercrud extends Controller
 
         }
     }
-    public function update_a_user($row_id ) {
+    public function update_a_user($row_id) {
+        echo 'CALL ME!!!';
+
         if(isset($_POST['submit'])){
     
             $data_missing = array();
@@ -213,6 +224,7 @@ class Usercrud extends Controller
         }
     }
     public function delete_a_user() {
+        echo 'delete user'. $_GET['rowID'];
         $is_successful = $this->user->delete($_GET['rowID']);
         if ($is_successful)        {
             // redirect to index view and print Student added;

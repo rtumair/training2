@@ -1,4 +1,30 @@
-{include file="/var/www/html/MVC/app/views/header.tpl"}
+<?php
+/* Smarty version 3.1.29, created on 2016-07-25 05:50:28
+  from "/var/www/html/MVC/app/views/updateuser.tpl" */
+
+if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
+  'has_nocache_code' => false,
+  'version' => '3.1.29',
+  'unifunc' => 'content_5795a8a4a27852_48765059',
+  'file_dependency' => 
+  array (
+    '1c20fe5b00a4ceafbcfdbd7cbf793b7a08bae449' => 
+    array (
+      0 => '/var/www/html/MVC/app/views/updateuser.tpl',
+      1 => 1469425820,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:/var/www/html/MVC/app/views/header.tpl' => 1,
+    'file:/var/www/html/MVC/app/views/footer.tpl' => 1,
+  ),
+),false)) {
+function content_5795a8a4a27852_48765059 ($_smarty_tpl) {
+$_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:/var/www/html/MVC/app/views/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +51,8 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-lg-6">
-                                <form action = "/MVC/public/usercrud/update_a_user/{$rowID}" role="form" method="POST">
+                                <form action = "/MVC/public/usercrud/update_a_user/<?php echo $_smarty_tpl->tpl_vars['rowID']->value;?>
+" role="form" method="POST">
                                     <div class="form-group">
                                         <label>Username</label>
                                         <input class="form-control" name="u_name" placeholder="AliceBob">
@@ -63,4 +90,6 @@
 </html>
 
 
-{include file="/var/www/html/MVC/app/views/footer.tpl"}
+<?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:/var/www/html/MVC/app/views/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
+}

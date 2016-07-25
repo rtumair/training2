@@ -12,5 +12,7 @@ ini_set('display_errors', 1);
 require_once '../app/init.php';
 require_once('../app/core/db_connection.php');
 require_once('../app/lib/smarty/Smarty.class.php');
+require_once('../app/controllers/SmartyApp.php');
+
 
 $app = new App;
