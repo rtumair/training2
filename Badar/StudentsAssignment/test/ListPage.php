@@ -1,9 +1,20 @@
 <h2> List of Students </h2>
 
+
+<form action="?action=Import & page=ListPage" method = "post">
+    <input type = "submit" name = "Import" value = "Import">
+
+</form>
+
+<form action="?page=ListPage&action=Export" method = "post">
+    <input type = "submit" name = "Export" value = "Export">
+
+</form>
+
+
 <?php
 
 $result = ListStu();
-
 
 
 if ($result->num_rows > 0) {

@@ -23,7 +23,7 @@ function ListStu()
     return $result;
 }
 
-    function Edit()
+function Edit()
     {
         //echo 'Entered Edit function';
         global $uid,$name,$Fname,$dob,$school,$city,$desc;
@@ -135,6 +135,56 @@ function ListStu()
 
     }
 
+function Import(){
+
+    global $db;
+    $conn = $db->connection_generated();
+
+    $filename = "students.csv";
+
+    $fp = fopen($filename,"r");
+
+    //parse the csv file row by row
+    while(($row = fgetcsv($fp,"500",",")) != FALSE)
+    {
+    //insert csv data into mysql table
+        $sql = "INSERT INTO Student (name,fathers_name,dob,School,City,Description,Status)
+        VALUES('" . implode("','",$row) . "')";
+        if(!mysqli_query($db, $sql))
+        {
+            die('Error : ' . mysqli_error($db));
+        }
+    }
+
+    fclose($fp);
+
+    mysqli_close($conn);
+
+}
+
+function Export(){
+
+    global $db;
+    $conn = $db->connection_generated();
+
+
+    // fetch mysql table rows
+    $sql = "select * from Student";
+    $result = mysqli_query($conn, $sql) or die("Selection Error " . mysqli_error($conn));
+
+    $fp = fopen('Students.csv', 'w');
+
+    while($row = mysqli_fetch_assoc($result))
+    {
+        fputcsv($fp, $row);
+    }
+
+    fclose($fp);
+
+    mysqli_close($conn);
+
+}
+
 function search ($id){
 
 
@@ -143,6 +193,9 @@ function search ($id){
 
     $sql = "Select * from Student where id=$id";
     $result = $conn->query($sql);
+
+    mysqli_close($conn);
+
     return $result;
 }
 
@@ -155,11 +208,13 @@ function Delete()
 
     $sql="DELETE FROM Student where  id= $delID";
     $conn->query($sql);
+    mysqli_close($conn);
+
 
 }
 
 
-    function AddStu()
+function AddStu()
     {
 
         global $db;
@@ -188,6 +243,9 @@ function Delete()
 
             echo "Student Added ! ";
         }
+
+        mysqli_close($conn);
+
 
 
     }
