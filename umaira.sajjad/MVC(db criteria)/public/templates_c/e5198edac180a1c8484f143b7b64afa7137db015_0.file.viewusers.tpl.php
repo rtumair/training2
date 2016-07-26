@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-25 05:50:23
+/* Smarty version 3.1.29, created on 2016-07-26 10:46:41
   from "/var/www/html/MVC/app/views/viewusers.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5795a89faef9f5_86496502',
+  'unifunc' => 'content_57973f91b80b29_34693491',
   'file_dependency' => 
   array (
     'e5198edac180a1c8484f143b7b64afa7137db015' => 
     array (
       0 => '/var/www/html/MVC/app/views/viewusers.tpl',
-      1 => 1469425820,
+      1 => 1469512634,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:/var/www/html/MVC/app/views/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5795a89faef9f5_86496502 ($_smarty_tpl) {
+function content_57973f91b80b29_34693491 ($_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:/var/www/html/MVC/app/views/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -77,7 +77,7 @@ $__foreach_row_0_saved_local_item = $_smarty_tpl->tpl_vars['row'];
  </td>
                                             <td align="left"> <?php echo $_smarty_tpl->tpl_vars['row']->value['user_email'];?>
  </td>
-                                            <td align="left"><form action="/MVC/public/usercrud/index" method = "GET">
+                                            <td align="left"><form action="/MVC/public/usercrud/updateuser_helper" method = "GET">
                                                     <input type="hidden" name = "rowID" value = "<?php echo $_smarty_tpl->tpl_vars['row']->value['user_id'];?>
 ">
                                                     <input type="submit" name = "update" value ="Update"/></form></td>

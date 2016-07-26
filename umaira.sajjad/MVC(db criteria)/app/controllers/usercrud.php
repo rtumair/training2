@@ -6,8 +6,6 @@
  * Time: 10:16 AM
  */
 
-
-
 class Usercrud extends Controller
 {
     protected $user;
@@ -25,7 +23,7 @@ class Usercrud extends Controller
 
     public function viewuser()
     {
-        $this-> smarty -> addParams('tabledata', $this->user->viewAll());
+        $this-> smarty -> addParams('tabledata', $this->user->ViewAll());
         $this->smarty->render('viewusers','usercrud');
 
     }
@@ -58,16 +56,13 @@ class Usercrud extends Controller
            if(empty($data_missing))
            {
                $is_successful = $this->user->authenticate([
-                   'email' => $email,
+                   'user_email' => $email,
                    'password' => $u_pass
                ]);
-               if ($is_successful)
+               if (!empty($is_successful))
                {
-
-                   // echo 'SESSIONSSS: '.  $_SESSION['login_user'];
                    header('Location: http://localhost/MVC/public');
                } else {
-                   // print error
                    echo 'could not redirect';
                }
 
@@ -116,10 +111,10 @@ class Usercrud extends Controller
 
             if(empty($data_missing))
             {
-                $is_successful = $this->user->create([
-                    'username' => $u_name,
+                $is_successful =  $this->user-> Create([
+                    'user_name' => $u_name,
                     'password' => $u_pass,
-                    'email' => $email
+                    'user_email' => $email
                 ]);
                 if ($is_successful)
                 {
@@ -170,10 +165,10 @@ class Usercrud extends Controller
     
             if(empty($data_missing)){
     
-                $is_successful = $this->user->update( $row_id ,[
-                    'username' => $u_name,
+                $is_successful = $this->user->Update( $row_id ,[
+                    'user_name' => $u_name,
                     'password' => $u_pass,
-                    'email' => $email
+                    'user_email' => $email
                 ]);
                 if ($is_successful)
                 {
@@ -204,9 +199,11 @@ class Usercrud extends Controller
         $this->smarty->addParams('rowID', $_GET['rowID']);
         $this->smarty->render('updateuser','usercrud');
     }
-    public function delete_a_user() {
+
+    public function delete_a_user()
+    {
        //  echo 'delete user'. $_GET['rowID'];
-        $is_successful = $this->user->delete($_GET['rowID']);
+        $is_successful = $this->user->Delete($_GET['rowID']);
         if ($is_successful)        {
             header('Location: http://localhost/MVC/public');
         } else {

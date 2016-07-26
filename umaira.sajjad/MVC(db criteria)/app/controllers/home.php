@@ -23,7 +23,7 @@ class Home extends Controller
     public function index()
     {
         session_start();
-
+        //echo 'sessions: ' . ($_SESSION['login_user']);
         if (empty($_SESSION['login_user'])) {
             $this->smarty->render('login','home');
         } else {

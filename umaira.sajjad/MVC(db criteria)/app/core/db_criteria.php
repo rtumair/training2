@@ -5,138 +5,177 @@
  * Date: 7/18/16
  * Time: 5:24 PM
  */
+require_once ('db_conn.php');
+class db_criteria  {
 
+    protected $connection;
 
-class db_criteria extends db_conn {
-
+    // Db variables
     protected $db_conn;
-    protected $table_name;
-    protected $column_fields;
-    
-    //------ my_sql attributes ------//
-    protected $Select;
-    protected $Insert;
-    protected $Values;
+    public $table_name;
+    public $column_fields = array();
 
-    
-    
+    //------ my_sql attributes ------//
+    protected $Where_statement; // not really needed
+
+    // ---------extra variables---------//
+    protected $table_data_array = array();
+
+
     public function __construct()
     {
-        $this-> $db_conn = new db_connection();
+        $this->connection = db_conn::getInstance()-> get_db_connection();
     }
 
-    public function create($user_Values)
+    public function Select($select_values, $where_fields, $where_operator, $where_values)
     {
-        $INSERT = $this-> Insert(array('user_id','user_name', 'password', 'user_email'));
-        $VALUES = $this-> Values (array ('NULL', '?', '?', '?'));
-
-        $query = "INSERT INTO user (user_id, user_name, password, user_email) VALUES (NULL, ?, ?, ?)";
-
-        $stmt = mysqli_prepare($this->db_conn, $query);
-
-        if ( !$stmt ) {
-            echo('mysqli error: '.mysqli_error($this->db_conn));
-        }
-       // var_dump($user_Values);
-
-        mysqli_stmt_bind_param($stmt, "sss", $user_Values['username'],$user_Values['password'],
-                        $user_Values['email']);
-
-        mysqli_stmt_execute($stmt);
-        $affected_rows = mysqli_stmt_affected_rows($stmt);
-        
-        $is_successful = 0;
-        
-        if($affected_rows == 1)
+        $query = "";
+        if (in_array('*', $select_values))
         {
-            $is_successful = 1;
-        } else 
-        {
-            $is_successful = 0;
+            if (in_array('0', $where_fields)) {
+                // echo 'select *, no where needed';
+                $query = 'SELECT * FROM '. $this -> table_name;
+            } else {
+                // echo 'select *, where needed';
+                $i = -1;
+                foreach ($where_values as $val) {
+                    $i++;
+                    if (!(count($where_values) == 1))
+                    {
+                        if ($i == count($where_values) - 1) {
+                            $temp = rtrim($this->Where_statement, ',');
+                            $this -> Where_statement = $temp.' AND '. $where_fields[$i]. $where_operator. " '$where_values[$i]' ";
+                        } else {
+                            $this -> Where_statement = $this -> Where_statement . $where_fields[$i]. $where_operator. " '$where_values[$i]' ". ',';
+                        }
+                    } else {
+                        $this -> Where_statement = $this -> Where_statement . $where_fields[$i]. $where_operator. " '$where_values[$i]' ";
+
+                    }
+                }
+               // $temp = rtrim($this->Where_statement, ",");
+                $query = 'SELECT  * FROM '. $this -> table_name. ' WHERE '. $this -> Where_statement;
+            }
         }
-
-        mysqli_stmt_close($stmt);
-        mysqli_close($this->db_conn);
-        
-        return $is_successful;
-    }
-    public function delete($user_id)
-    {
-        $query = "DELETE FROM user WHERE user_id = $user_id";
-        $is_successful = 0;
-        if (mysqli_query($this->db_conn, $query)) {
-            $is_successful = 1;
-            mysqli_close($this->db_conn);
-        } else {
-//            echo "Error deleting record: " . mysqli_error($dbc);
-            $is_successful = 0;
-        }
-        return $is_successful;
-    }
-
-    public function update($row_val, $user_values)
-    {
-        // echo $row_val;
-        $username = $user_values['username'];
-        $userpass = $user_values['password'];
-        $useremail = $user_values['email'];
-        $query = "UPDATE user SET  user_name = '$username',
-                    password = '$userpass', user_email = '$useremail'
-                      WHERE user_id = '$row_val'";
-
-        $is_successful = 0;
-        if (mysqli_query($this->db_conn, $query))
-        {
-            $is_successful = 1;
-            mysqli_close($this->db_conn);
-        } else
-        {
-           echo "Error updateing record: " . mysqli_error($this->db_conn);
-            $is_successful = 0;
-        }
-        return $is_successful;
-    }
-
-    public function viewAll() 
-    {
-        // view the whole table of users
-        $query = "SELECT user_id, user_name, user_email FROM user";
-        $response = @mysqli_query($this->db_conn, $query);
+//        echo 'start';
+//        echo $this -> query_stmt;
+//        echo 'end';
         $table_data_array = array();
-
-        if ($response) {
-            while ($row = mysqli_fetch_array($response)) {
+        try
+        {
+            $response =  $this -> connection-> query($query);
+            while ($row = $response->fetch(PDO::FETCH_ASSOC)) {
                 array_push($table_data_array, $row);
             }
-
-        } else {
-            echo "Couldn't issue database query<br />";
-            echo mysqli_error($this->db_conn);
+        } catch (PDOException $e)
+        {
+            echo $e;
         }
-       // var_dump($table_data_array);
-        mysqli_close($this->db_conn);
-
         return $table_data_array;
-
     }
-    public function authenticate($user_values)
-    {
-        $userpass = md5($user_values['password']);
-        $useremail = $user_values['email'];
 
-        $query = "SELECT * FROM user WHERE user_email = '$useremail' and password = '$userpass' ";
+
+    public function Insert($insert_values, $user_Values)
+    {
+
+        $insert_stmt = "";
+        $values_stmt = "";
+//        var_dump($user_Values);
+//        echo '<br> </br>';
+//
+        foreach ($user_Values as $key => $val)
+        {
+            $insert_stmt = $insert_stmt . $key . " , ";
+            $values_stmt = $values_stmt . " '$val' "  . " , ";
+        }
+        $temp = rtrim($insert_stmt, " , ");
+        $temp2 = rtrim($values_stmt , " , ");
+
+        $query = 'INSERT INTO '. $this -> table_name. ' ( user_id, '. $temp. ' ) '. ' VALUES '. ' ( NULL, '. $temp2. ')';
+      //   echo 'start'.$query.'end';
 
         $is_successful = 0;
-        if (mysqli_query($this->db_conn, $query)) {
-            $is_successful = 1;
-            session_start();
-            $_SESSION['login_user'] = $useremail;
-            mysqli_close($this->db_conn);
-        } else {
-            echo "Error updating record: " . mysqli_error($this->db_conn);
+        try
+        {
+            $response =  $this -> connection-> query($query);
+            $is_successful = $response->rowCount();
+        } catch (PDOException $e)
+        {
+            echo $e;
         }
-        return $is_successful;
 
+        return $is_successful;
     }
 
+    public function Delete($where_fields, $where_operator, $where_values)
+    {
+
+        if (in_array('0', $where_fields)) {
+             echo 'delete *, no where needed';
+          //  $query = 'DELETE FROM '. $this -> table_name;
+        } else {
+            echo 'delete *, where needed';
+            $i = -1;
+            foreach ($where_values as $val) {
+                $i++;
+                if (!(count($where_values) == 1))
+                {
+                    if ($i == count($where_values) - 1) {
+                        $temp = rtrim($this->Where_statement, ',');
+                        $this -> Where_statement = $temp.' AND '. $where_fields[$i]. $where_operator. " '$where_values[$i]' ";
+                    } else {
+                        $this -> Where_statement = $this -> Where_statement . $where_fields[$i]. $where_operator. " '$where_values[$i]' ". ',';
+                    }
+                } else {
+                    $this -> Where_statement = $this -> Where_statement . $where_fields[$i]. $where_operator. " '$where_values[$i]' ";
+                }
+            }
+            // $temp = rtrim($this->Where_statement, ",");
+            $query = 'DELETE FROM '. $this -> table_name.' WHERE '.  $this -> Where_statement;
+            echo $query;
+        }
+        $is_successful = 0;
+        try
+        {
+            $response =  $this -> connection-> query($query);
+            $is_successful = $response->rowCount();
+            echo $is_successful;
+        } catch (PDOException $e)
+        {
+            echo $e;
+        }
+        return $is_successful;
+    }
+
+    public function Update($set_operator, $set_values, $where_operator, $where_values)
+    {
+        $set_stmt = "";
+        $where_stmt = "";
+//        var_dump($set_values);
+//        var_dump($where_values);
+        foreach ($set_values as $key => $val)
+        {
+            $set_stmt = $set_stmt . $key . $set_operator ." '$val' "  . " , ";
+        }
+        $temp = rtrim($set_stmt, " , ");
+        foreach ($where_values as $key => $val)
+        {
+            $where_stmt = $where_stmt . $key . $where_operator ." '$val' "  . " , ";
+        }
+        $temp2 = rtrim($where_stmt, " , ");
+
+        $query = 'UPDATE '. $this -> table_name. ' SET '. $temp. ' WHERE '. $temp2;
+        // echo 'start'. $query . 'end';
+        $is_successful = 0;
+        try
+        {
+            $response =  $this -> connection-> query($query);
+            $is_successful = $response->rowCount();
+            echo $is_successful;
+        } catch (PDOException $e)
+        {
+            echo $e;
+        }
+        return $is_successful;
+    }
 }

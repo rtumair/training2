@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-25 05:54:29
+/* Smarty version 3.1.29, created on 2016-07-26 10:23:09
   from "/var/www/html/MVC/app/views/header.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5795a99545e306_77400354',
+  'unifunc' => 'content_57973a0db64cb7_08431477',
   'file_dependency' => 
   array (
     '582318ec25d08a297f75d1409aee021d622b2b5e' => 
     array (
       0 => '/var/www/html/MVC/app/views/header.tpl',
-      1 => 1469426067,
+      1 => 1469512634,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5795a99545e306_77400354 ($_smarty_tpl) {
+function content_57973a0db64cb7_08431477 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -104,7 +104,7 @@ function content_5795a99545e306_77400354 ($_smarty_tpl) {
                         <li>
                             
 
-                            <a href="/MVC/public/usercrud/adduser"> <i class="fa fa-dashboard fa-fw"></i> Add User</a>
+                            <a href="/MVC/public/usercrud/adduser_helper"> <i class="fa fa-dashboard fa-fw"></i> Add User</a>
                         </li>
                         <li>
                             <a href="/MVC/public/usercrud/viewuser" ><i class="fa fa-dashboard fa-fw"></i> View Users</a>
