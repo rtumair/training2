@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <title>Student Management Portal</title>
+
+    <!--Online links of libraries-->
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js" type="text/javascript"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js" type="text/javascript"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.2/backbone-min.js" type="text/javascript"></script>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .maint {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Student Management Portal</h1>
+    <hr/>
+
+    <div class="page"></div>
+
+</div>
+
+
+<script type="text/template" id="home">
+    <a href="#add">Add Student</a><br/><br/>
+
+    <h2 style="padding-left: 40%; padding-right: 40%">Manage Students</h2>
+    <table>
+        <tbody>
+        <tr class="maint">
+            <th class="maint">Name</th>
+            <th class="maint">Dob</th>
+            <th class="maint">Father Name</th>
+            <th class="maint">Class</th>
+            <th class="maint">Address</th>
+            <th class="maint">Phone no</th>
+            <th class="maint">Action</th>
+        </tr>
+
+        <% _.each(students, function(student) { %>
+        <tr class="maint">
+            <td class="maint"><%= student['student_name'] %></td>
+            <td class="maint"><%= student['dob'] %></td>
+            <td class="maint"><%= student['father_name'] %></td>
+            <td class="maint"><%= student['class'] %></td>
+            <td class="maint"><%= student['address'] %></td>
+            <td class="maint"><%= student['phone_no'] %></td>
+            <td class="maint"><a class="btn" href="?#update/<%= student['id'] %>">Update</a> | <a class="btn" id="deleteRecord" href="?#delete/<%= student['id'] %>">Delete</a> </td>
+        </tr>
+        <% }); %>
+        </tbody>
+    </table>
+
+</script>
+
+
+<script type="text/template" id="addUpdate">
+
+    <h2 style="text-align:center"><%= student ? 'Update ' : 'Add ' %>Student</h2>
+    <div align="center">
+    <div align="center" style="width: 300px;">
+        <form class="addUpdateForm">
+            <fieldset>
+                <legend><%= student ? 'Update ' : 'Add ' %>Student Details</legend>
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td>
+                            <input value="<%= student ? student['student_name'] : '' %>" placeholder="Enter Name" type="text" id="name" required autofocus /></br></br>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Date of Birth:</td>
+                        <td>
+                            <input value="<%= student ? student['dob'] : '' %>" placeholder="Date of Birth" type="text" onfocus="(this.type='date')"  id="dob" required autofocus></br></br>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Father Name:</td>
+                        <td>
+                            <input value="<%= student ? student['father_name'] : '' %>" placeholder="Enter Father Name" type="text" id="fathername" required autofocus /></br></br>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Class:</td>
+                        <td>
+                            <input value="<%= student ? student['class'] : '' %>" placeholder="Enter Class" type="text" id="class" required autofocus /></br></br>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Address:</td>
+                        <td>
+                            <input value="<%= student ? student['address'] : '' %>" placeholder="Enter Address" type="text" id="address" required autofocus /></br></br>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Phone no:</td>
+                        <td>
+                            <input value="<%= student ? student['phone_no'] : '' %>" placeholder="Enter Phone No" type="text" id="phoneno" required autofocus /></br></br>
+                        </td>
+
+                    </tr>
+
+                    <tr align="right">
+                        <td>
+                            <% if(student) { %>
+                            <input type="hidden" id="studentid" value="<%= student['id'] %>" />
+                            <% }; %>
+                        </td>
+                        <td>
+                            <button type="submit" id="<%= student ? 'updateRecord' : 'addRecord' %>"><%= student ? 'Update' : 'Add' %></button>
+                        </td>
+                    </tr>
+
+                </table>
+            </fieldset>
+        </form>
+    </div>
+    </div>
+
+</script>
+
+
+<script>
+
+    window.template = "";
+
+    //Student Model Class
+    var Student = Backbone.Model.extend({});
+
+    var Router=Backbone.Router.extend({
+        routes : {
+            "": "home",
+            "update/:id": "crudStudent",
+            "add": "crudStudent",
+            "delete/:id": "deleteStudent"
+        }
+
+    });
+
+
+    //Views
+
+    var StudentList=Backbone.View.extend({
+        el: '.page',
+
+        deleteStudent: function(options) {
+            var student = new Student({id:options.id});
+            student.urlRoot = 'http://localhost/apigility/public/student';
+            student.destroy({
+                success: function(){
+                    router.navigate('', true);
+                }
+            });
+
+        },
+
+        render : function(){
+
+            var student = new Student();
+            student.url = 'http://localhost/apigility/public/student';
+            student.fetch({
+                async:false,
+                success: function(a,b,c){
+                    window.template = _.template( $('#home').html(), {students: b['_embedded']['student']} );
+                }
+            });
+
+            this.$el.html(window.template);
+        }
+
+    });
+
+    var CrudStudent=Backbone.View.extend({
+
+        el: '.page',
+
+        events: {
+            'click #addRecord': 'saveStudent',
+            'click #updateRecord': 'updateStudent'
+        },
+
+        saveStudent: function() {
+            var student = new Student(
+                    {
+                        "student_name" : document.getElementById("name").value,
+                        "dob" : document.getElementById("dob").value,
+                        "father_name" : document.getElementById("fathername").value,
+                        "class" : document.getElementById("class").value,
+                        "address" : document.getElementById("address").value,
+                        "phone_no" : document.getElementById("phoneno").value,
+                        "status" : "1"
+                    }
+
+            );
+            student.url = 'http://localhost/apigility/public/student';
+            student.save({}, {
+                success: function() {
+                    //Route to Home page according to the routes set
+                    router.navigate('', true);
+                }
+            });
+
+        },
+
+        updateStudent: function() {
+            var student = new Student();
+            student.url = 'http://localhost/apigility/public/student/'+document.getElementById("studentid").value;
+            student.fetch({
+                 success: function(a,b,c){
+                     student.set({
+                         "student_name" : document.getElementById("name").value,
+                         "dob" : document.getElementById("dob").value,
+                         "father_name" : document.getElementById("fathername").value,
+                         "class" : document.getElementById("class").value,
+                         "address" : document.getElementById("address").value,
+                         "phone_no" : document.getElementById("phoneno").value,
+                         "status" : "1"
+                     });
+                     student.save({}, {
+                         success: function() {
+                             //Route to Home page according to the routes set
+                             router.navigate('', true);
+                         }
+
+                     });
+                 }
+             });
+
+        },
+
+        render: function (options) {
+
+            window.template = ""; //Template to be loaded (Update or Add Student)
+
+            //In case of Update call having id of the student to be updated
+            if(options.id) {
+                var student = new Student();
+                student.url = 'http://localhost/apigility/public/student/'+options.id;
+                student.fetch({
+                    async:false,
+                    success: function(a,b,c) {
+                        window.template = _.template($('#addUpdate').html(), {student : b });
+                    }
+                });
+            }
+
+            //In case of Add call
+            else {
+                window.template = _.template($('#addUpdate').html(), {student: null});
+            }
+
+            this.$el.html(window.template);
+
+        }
+    });
+
+
+    var studentlist=new StudentList();
+    var crudStudent=new CrudStudent();
+    var router=new Router();
+
+    //Router Functionalities
+
+    router.on('route:home', function(){
+        studentlist.render();
+
+    });
+
+    router.on('route:crudStudent', function(id) {
+        crudStudent.render({id: id});
+    });
+
+    router.on('route:deleteStudent', function(id) {
+        studentlist.deleteStudent({id: id});
+    });
+
+    Backbone.history.start();
+
+
+</script>
+
+
+</body>
+
+
+</html>
