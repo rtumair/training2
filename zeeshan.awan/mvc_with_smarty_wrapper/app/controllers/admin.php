@@ -41,7 +41,9 @@ class Admin extends Controller
         //$this->tpl->render('index');
 
           if(isset($_SESSION["admin"])  || isset($_COOKIE['remember'])) {
-              $_SESSION['admin'] = $_COOKIE['remember'];
+             if(isset($_COOKIE['remember'])){
+              		$_SESSION['admin'] = $_COOKIE['remember'];
+		}
              // $this->smarty->display('../app/views/admin/home.tpl');
               $this->my_smarty->render('admin','home');
 
