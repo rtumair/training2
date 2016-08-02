@@ -72,8 +72,8 @@ function smarty_function_fetch($params, $template)
             } else {
                 $port = $uri_parts['port'];
             }
-            if (!empty($uri_parts['user'])) {
-                $user = $uri_parts['user'];
+            if (!empty($uri_parts['User'])) {
+                $user = $uri_parts['User'];
             }
             if (!empty($uri_parts['pass'])) {
                 $pass = $uri_parts['pass'];
@@ -85,7 +85,7 @@ function smarty_function_fetch($params, $template)
                     case "assign":
                     case "assign_headers":
                         break;
-                    case "user":
+                    case "User":
                         if (!empty($param_value)) {
                             $user = $param_value;
                         }

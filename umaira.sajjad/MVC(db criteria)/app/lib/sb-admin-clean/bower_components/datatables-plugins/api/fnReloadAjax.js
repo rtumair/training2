@@ -93,7 +93,7 @@ jQuery.fn.dataTableExt.oApi.fnReloadAjax = function ( oSettings, sNewSource, fnC
 
 		that.oApi._fnProcessingDisplay( oSettings, false );
 
-		/* Callback user function - for event handlers etc */
+		/* Callback User function - for event handlers etc */
 		if ( typeof fnCallback == 'function' && fnCallback !== null )
 		{
 			fnCallback( oSettings );

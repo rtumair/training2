@@ -1,28 +1,28 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-25 05:58:20
+/* Smarty version 3.1.29, created on 2016-08-01 07:09:43
   from "/var/www/html/MVC/app/views/home/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5795aa7c071081_25243351',
+  'unifunc' => 'content_579ef5b71ec799_01977649',
   'file_dependency' => 
   array (
     '87ed9ff2a555d77ffb34f48871c9015a2311749c' => 
     array (
       0 => '/var/www/html/MVC/app/views/home/index.tpl',
-      1 => 1469426295,
+      1 => 1470035381,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:/var/www/html/MVC/app/views/header.tpl' => 1,
-    'file:/var/www/html/MVC/app/views/footer.tpl' => 1,
+    'file:/var/www/html/MVC/app/views/layouts/header.tpl' => 1,
+    'file:/var/www/html/MVC/app/views/layouts/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5795aa7c071081_25243351 ($_smarty_tpl) {
-$_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:/var/www/html/MVC/app/views/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+function content_579ef5b71ec799_01977649 ($_smarty_tpl) {
+$_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:/var/www/html/MVC/app/views/layouts/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 
@@ -146,7 +146,7 @@ $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:/var/www/htm
 
 </html>
 
-<?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:/var/www/html/MVC/app/views/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+<?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:/var/www/html/MVC/app/views/layouts/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 <?php }

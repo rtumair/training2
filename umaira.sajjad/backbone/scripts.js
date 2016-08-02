@@ -55,12 +55,13 @@
     });
 
     var NewStudent = Backbone.View.extend({
+        // posts and puts
         el: '.page',
         render: function(params){
             // console.log(params.id);
             var that = this;
             if (params) {
-                // console.log('XXXXX');
+                // put 
                 var student = new Student({id: params});
                 student.fetch({
                     success: function (student)
@@ -71,7 +72,7 @@
                     }
                 });
             } else {
-                // console.log('UUUUUU');
+                // post;
                 var template = _.template( $('#student-new-template').html(), {student: null});
                 this.$el.html(template);
             }

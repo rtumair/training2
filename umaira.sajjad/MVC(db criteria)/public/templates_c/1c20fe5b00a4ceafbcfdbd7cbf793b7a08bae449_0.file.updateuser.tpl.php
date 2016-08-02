@@ -1,6 +1,6 @@
 <?php
 /* Smarty version 3.1.29, created on 2016-07-26 12:55:58
-  from "/var/www/html/MVC/app/views/updateuser.tpl" */
+  from "/var/www/html/MVC/app/views/update.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
@@ -10,7 +10,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
     '1c20fe5b00a4ceafbcfdbd7cbf793b7a08bae449' => 
     array (
-      0 => '/var/www/html/MVC/app/views/updateuser.tpl',
+      0 => '/var/www/html/MVC/app/views/update.tpl',
       1 => 1469512635,
       2 => 'file',
     ),

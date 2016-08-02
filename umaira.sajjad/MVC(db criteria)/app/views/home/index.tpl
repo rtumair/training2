@@ -1,4 +1,4 @@
-{include file="/var/www/html/MVC/app/views/header.tpl"}
+{include file="/var/www/html/MVC/app/views/layouts/header.tpl"}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -120,4 +120,4 @@
 
 </html>
 
-{include file="/var/www/html/MVC/app/views/footer.tpl"}
+{include file="/var/www/html/MVC/app/views/layouts/footer.tpl"}

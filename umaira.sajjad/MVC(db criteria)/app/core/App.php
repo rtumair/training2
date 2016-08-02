@@ -5,12 +5,10 @@
  * Date: 7/18/16
  * Time: 2:07 PM
  */
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
 class App {
     
-    protected $controller = 'home';
+    protected $controller = 'homeController';
     protected $method = 'index';
     protected $params = [];
 
@@ -20,16 +18,17 @@ class App {
     public function __construct()
     {
         $url = $this->parseUrl();
-        if (file_exists('../app/controllers/' . $url[0] .'.php'))
+//        var_dump($url);
+
+        if (file_exists('../app/controllers/' . $url[0] .'Controller.php'))
         {
             // check if controller exists
-            $this->controller = $url[0];
+            $this->controller = $url[0].'Controller';
             unset($url[0]);
         }
 
         require_once '../app/controllers/'.$this->controller.'.php';
         $this->controller = new $this->controller;
-
         if (isset($url[1]))
         {
             if (method_exists($this->controller, $url[1] ))
@@ -39,7 +38,7 @@ class App {
             }
         }
 
-        // echo $url;
+//         echo $url;
         $this->params = $url ? array_values($url) : [];
         call_user_func_array([$this->controller, $this->method], $this->params);
 
@@ -51,9 +50,8 @@ class App {
     public function parseUrl()
     {
         if (isset($_GET['url'])) {
-           // echo $_GET['url'];
+//           echo $_GET['url'];
             return $url = explode('/', filter_var(rtrim($_GET['url'],'/'), FILTER_SANITIZE_URL));
-
         }
 
     }

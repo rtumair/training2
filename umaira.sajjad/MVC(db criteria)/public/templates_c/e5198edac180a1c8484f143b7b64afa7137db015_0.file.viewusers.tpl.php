@@ -1,6 +1,6 @@
 <?php
 /* Smarty version 3.1.29, created on 2016-07-26 10:46:41
-  from "/var/www/html/MVC/app/views/viewusers.tpl" */
+  from "/var/www/html/MVC/app/views/view.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
@@ -10,7 +10,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
     'e5198edac180a1c8484f143b7b64afa7137db015' => 
     array (
-      0 => '/var/www/html/MVC/app/views/viewusers.tpl',
+      0 => '/var/www/html/MVC/app/views/view.tpl',
       1 => 1469512634,
       2 => 'file',
     ),

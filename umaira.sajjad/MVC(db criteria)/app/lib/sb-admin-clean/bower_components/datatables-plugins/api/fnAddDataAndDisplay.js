@@ -31,7 +31,7 @@ jQuery.fn.dataTableExt.oApi.fnAddDataAndDisplay = function ( oSettings, aData )
 
 	/* Need to re-filter and re-sort the table to get positioning correct, not perfect
 	 * as this will actually redraw the table on screen, but the update should be so fast (and
-	 * possibly not alter what is already on display) that the user will not notice
+	 * possibly not alter what is already on display) that the User will not notice
 	 */
 	this.oApi._fnReDraw( oSettings );
 

@@ -4,23 +4,28 @@
  * Created by PhpStorm.
  * User: umaira.sajjad
  * Date: 7/25/16
- * Time: 9:50 AM
+ * Time: 9:43 AM
  */
-require_once ('../app/controllers/SmartyApp.class.php');
-class ViewManager
+class ViewManager extends Smarty
 {
-    public $smarty;
+    function __contruct()
+    {
+        parent::__construct();
 
-    public function __construct()
-    {
-        $this->smarty = new Smarty_MyApp();
     }
-    public function addParams($key, $value)
+
+    function render ($view, $controlller)
     {
-        $this -> smarty -> addParams($key, $value);
+        if ($view == 'login' || $view == 'index')
+        {
+            $this-> display(('../app/views/home/'. $view. '.tpl'));
+        } else {
+            $this-> display('../app/views/'. $view.'.tpl');
+        }
     }
-    public function render ($view, $controller)
+
+    function addParams($key, $value)
     {
-        $this->smarty->render($view, $controller);
+        $this->assign($key,$value);
     }
 }
