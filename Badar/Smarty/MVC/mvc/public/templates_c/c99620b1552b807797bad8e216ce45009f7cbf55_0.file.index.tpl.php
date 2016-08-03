@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-08-01 06:07:08
+/* Smarty version 3.1.29, created on 2016-08-02 12:20:40
   from "/var/www/html/MVC/mvc/app/views/home/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_579ee70c8a3409_39474959',
+  'unifunc' => 'content_57a09018ef42a3_07772471',
   'file_dependency' => 
   array (
     'c99620b1552b807797bad8e216ce45009f7cbf55' => 
     array (
       0 => '/var/www/html/MVC/mvc/app/views/home/index.tpl',
-      1 => 1470031626,
+      1 => 1470140437,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_579ee70c8a3409_39474959 ($_smarty_tpl) {
+function content_57a09018ef42a3_07772471 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,6 +76,12 @@ function content_579ee70c8a3409_39474959 ($_smarty_tpl) {
                             </div>
                             <div class="form-group">
                                 <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                            </div>
+
+                            <div class="checkbox">
+                                <label>
+                                    <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                </label>
                             </div>
 
                             <!-- Change this to a button or input when using this as a form -->

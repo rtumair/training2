@@ -186,10 +186,12 @@ class DB_Criteria extends DB_Con
 
        // echo '<br>db val '.$user;
        // echo '<br>db val '.$user;
+        $passwrd= md5($pass);
+
 
         $conn = $this->connection_generated();
 
-        $sql = "Select * from $tablename WHERE username='$user' AND password='$pass'";
+        $sql = "Select * from $tablename WHERE username='$user' AND password='$passwrd'";
 
         //echo '<br>'.$sql;
         $result =  mysqli_query($conn, $sql);

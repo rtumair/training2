@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 /**
  * Created by PhpStorm.
  * User: muhammad.badar
@@ -28,6 +30,24 @@ public function login(){
 
     if($res){
 
+        if(isset($_POST['remember'])) {
+
+            //echo "creating cookie named : ";
+
+            $cookie_name="user_name";
+            $cookie_value="admin";
+
+            setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+
+            //echo $_COOKIE["user_name"];
+
+            //echo "<br>cookie is set ";
+
+
+        }
+        session_start();
+        $_SESSION["User"]='OK';
+
         $smarty->display('/var/www/html/MVC/mvc/app/views/home/students.tpl');
     }
 
@@ -49,7 +69,21 @@ public function login(){
 
       // $this->view('home/index',['name'=> $usr->name]);
 
-        $smarty->display('/var/www/html/MVC/mvc/app/views/home/index.tpl');
+        //$smarty->display('/var/www/html/MVC/mvc/app/views/home/index.tpl');
+
+
+        //echo $_COOKIE["user_name"];
+
+        if($_COOKIE["user_name"]==="admin"){
+
+           $this->students();
+        }
+        else{
+
+            $smarty->display('/var/www/html/MVC/mvc/app/views/home/index.tpl');
+        }
+
+
 
 
     }
@@ -57,9 +91,16 @@ public function login(){
     public function students(){
 
         //$this->view('home/students');
-
         $smarty = new Smarty();
-        $smarty->display('/var/www/html/MVC/mvc/app/views/home/students.tpl');
+
+        if($_SESSION["User"]==='OK' || $_COOKIE["user_name"]==="admin"  ) {
+
+            $smarty->display('/var/www/html/MVC/mvc/app/views/home/students.tpl');
+        }
+        else
+        {
+            $smarty->display('/var/www/html/MVC/mvc/app/views/home/index.tpl');
+        }
         //$smarty->assign('myvar','students.tpl');
     }
 
@@ -68,7 +109,15 @@ public function login(){
         //$this->view('home/AddStudent');
 
         $smarty = new Smarty();
-        $smarty->display('/var/www/html/MVC/mvc/app/views/home/AddStudent.tpl');
+
+        if($_SESSION["User"]==='OK' || $_COOKIE["user_name"]==="admin"  ) {
+            $smarty->display('/var/www/html/MVC/mvc/app/views/home/AddStudent.tpl');
+        }
+
+        else{
+
+            $smarty->display('/var/www/html/MVC/mvc/app/views/home/index.tpl');
+        }
 
     }
 
@@ -89,8 +138,15 @@ public function login(){
         //$data = 'badar';
 
         $smarty = new Smarty();
+
+        if($_SESSION["User"]==='OK' || $_COOKIE["user_name"]==="admin"  ) {
         $smarty->assign('data',$result);
-        $smarty->display('/var/www/html/MVC/mvc/app/views/home/ListPage.tpl');
+        $smarty->display('/var/www/html/MVC/mvc/app/views/home/ListPage.tpl'); }
+
+        else{
+
+            $smarty->display('/var/www/html/MVC/mvc/app/views/home/index.tpl');
+        }
 
 
         }
@@ -105,8 +161,16 @@ public function login(){
        // $this->view('home/ListPage',$result);
 
         $smarty = new Smarty();
-        $smarty->assign('data',$result);
-        $smarty->display('/var/www/html/MVC/mvc/app/views/home/ListPage.tpl');
+
+        if($_SESSION["User"]==='OK' || $_COOKIE["user_name"]==="admin"  ) {
+            $smarty->assign('data', $result);
+            $smarty->display('/var/www/html/MVC/mvc/app/views/home/ListPage.tpl');
+        }
+
+        else{
+
+            $smarty->display('/var/www/html/MVC/mvc/app/views/home/index.tpl');
+        }
 
     }
 
@@ -120,8 +184,15 @@ public function login(){
         //$this->view('home/ListPage',$result);
 
         $smarty = new Smarty();
+
+        if($_SESSION["User"]==='OK' || $_COOKIE["user_name"]==="admin"  ) {
         $smarty->assign('data',$result);
-        $smarty->display('/var/www/html/MVC/mvc/app/views/home/ListPage.tpl');
+        $smarty->display('/var/www/html/MVC/mvc/app/views/home/ListPage.tpl'); }
+
+    else{
+
+            $smarty->display('/var/www/html/MVC/mvc/app/views/home/index.tpl');
+        }
     }
 
     public function Delete(){
@@ -134,8 +205,15 @@ public function login(){
 
        // $this->view('home/ListPage',$result);
         $smarty = new Smarty();
+        if($_SESSION["User"]==='OK'|| $_COOKIE["user_name"]==="admin"  ) {
         $smarty->assign('data',$result);
-        $smarty->display('/var/www/html/MVC/mvc/app/views/home/ListPage.tpl');
+        $smarty->display('/var/www/html/MVC/mvc/app/views/home/ListPage.tpl'); }
+
+        else{
+
+            $smarty->display('/var/www/html/MVC/mvc/app/views/home/index.tpl');
+        }
+
 
 
 
@@ -154,8 +232,14 @@ public function login(){
        // $this->view('home/ListPage',$result);
 
         $smarty = new Smarty();
+        if($_SESSION["User"]==='OK' || $_COOKIE["user_name"]==="admin"  ) {
         $smarty->assign('data',$result);
-        $smarty->display('/var/www/html/MVC/mvc/app/views/home/ListPage.tpl');
+        $smarty->display('/var/www/html/MVC/mvc/app/views/home/ListPage.tpl'); }
+
+        else{
+
+            $smarty->display('/var/www/html/MVC/mvc/app/views/home/index.tpl');
+        }
     }
 
     public function studentadd(){
@@ -185,8 +269,15 @@ public function login(){
         //$this->view('home/ListPage',$result);
 
         $smarty = new Smarty();
+
+        if($_SESSION["User"]==='OK' || $_COOKIE["user_name"]==="admin"  ) {
         $smarty->assign('data',$result);
-        $smarty->display('/var/www/html/MVC/mvc/app/views/home/ListPage.tpl');
+        $smarty->display('/var/www/html/MVC/mvc/app/views/home/ListPage.tpl'); }
+
+    else{
+
+            $smarty->display('/var/www/html/MVC/mvc/app/views/home/index.tpl');
+        }
 
     }
 
@@ -271,8 +362,15 @@ public function login(){
         //$this->view('home/ListPage',$rv);
 
         $smarty = new Smarty();
+
+        if($_SESSION["User"]==='OK' || $_COOKIE["user_name"]==="admin"  ) {
         $smarty->assign('data',$rv);
-        $smarty->display('/var/www/html/MVC/mvc/app/views/home/ListPage.tpl');
+        $smarty->display('/var/www/html/MVC/mvc/app/views/home/ListPage.tpl'); }
+
+    else{
+
+            $smarty->display('/var/www/html/MVC/mvc/app/views/home/index.tpl');
+        }
 
     }
     
@@ -293,8 +391,14 @@ public function login(){
         //$this->view('home/Editpage',$result);
 
         $smarty = new Smarty();
+
+        if($_SESSION["User"]==='OK'|| $_COOKIE["user_name"]==="admin"  ) {
         $smarty->assign('data',$result);
-        $smarty->display('/var/www/html/MVC/mvc/app/views/home/Editpage.tpl');
+        $smarty->display('/var/www/html/MVC/mvc/app/views/home/Editpage.tpl'); }
+        else{
+
+            $smarty->display('/var/www/html/MVC/mvc/app/views/home/index.tpl');
+        }
 
 
 
@@ -303,7 +407,12 @@ public function login(){
 
     public function AddStudents(){
         $smarty = new Smarty;
-        $smarty->display('/var/www/html/MVC/mvc/app/views/home/AddStudent.tpl');
+        if($_SESSION["User"]==='OK' || $_COOKIE["user_name"]==="admin"  ) {
+        $smarty->display('/var/www/html/MVC/mvc/app/views/home/AddStudent.tpl');}
+        else{
+
+            $smarty->display('/var/www/html/MVC/mvc/app/views/home/index.tpl');
+        }
     }
 
     
@@ -311,15 +420,24 @@ public function login(){
 
         $smarty = new Smarty();
 
-        $smarty->display('/var/www/html/MVC/mvc/app/views/home/ViewOne.tpl');
+        if($_SESSION["User"]==='OK' || $_COOKIE["user_name"]==="admin"  ) {
+        $smarty->display('/var/www/html/MVC/mvc/app/views/home/ViewOne.tpl');}
+        else{
+
+            $smarty->display('/var/www/html/MVC/mvc/app/views/home/index.tpl');
+        }
         
     }
 
     public function ViewPK(){
 
         $smarty = new Smarty();
+        if($_SESSION["User"]==='OK' || $_COOKIE["user_name"]==="admin"  ) {
+        $smarty->display('/var/www/html/MVC/mvc/app/views/home/ViewByPK.tpl');}
+        else{
 
-        $smarty->display('/var/www/html/MVC/mvc/app/views/home/ViewByPK.tpl');
+            $smarty->display('/var/www/html/MVC/mvc/app/views/home/index.tpl');
+        }
 
     }
 
@@ -327,8 +445,25 @@ public function login(){
 
         $smarty = new Smarty();
 
-        $smarty->display('/var/www/html/MVC/mvc/app/views/home/DeleteBYPK.tpl');
+        if($_SESSION["User"]==='OK' || $_COOKIE["user_name"]==="admin"  ) {
+        $smarty->display('/var/www/html/MVC/mvc/app/views/home/DeleteBYPK.tpl');}
+        else{
 
+            $smarty->display('/var/www/html/MVC/mvc/app/views/home/index.tpl');
+        }
+
+    }
+
+    public function logout(){
+
+        setcookie("user_name",false,-1,'/');
+
+        session_unset();
+        session_destroy();
+
+
+        $smarty = new Smarty();
+        $smarty->display('/var/www/html/MVC/mvc/app/views/home/index.tpl');
     }
 
     

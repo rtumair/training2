@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-08-01 05:58:59
+/* Smarty version 3.1.29, created on 2016-08-02 12:11:43
   from "/var/www/html/MVC/mvc/app/views/home/students.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_579ee5236db405_42167768',
+  'unifunc' => 'content_57a08dffa7c015_02988155',
   'file_dependency' => 
   array (
     '5365daa186ada15e47b26466782435af0cda5997' => 
     array (
       0 => '/var/www/html/MVC/mvc/app/views/home/students.tpl',
-      1 => 1470031124,
+      1 => 1470139840,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_579ee5236db405_42167768 ($_smarty_tpl) {
+function content_57a08dffa7c015_02988155 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -92,7 +92,7 @@ function content_579ee5236db405_42167768 ($_smarty_tpl) {
 
                     </li>
                     <li>
-                        <a href="http://localhost/MVC/mvc/public/home/index" ><i class="fa fa-dashboard fa-fw"></i>Logout</a>
+                        <a href="http://localhost/MVC/mvc/public/home/logout" ><i class="fa fa-dashboard fa-fw"></i>Logout</a>
                     </li>
 
 

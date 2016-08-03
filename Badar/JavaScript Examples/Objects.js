@@ -1,0 +1,30 @@
+var booksArray = ["Great Expectations", "The Remains of the Day", "Peter Pan"];
+
+var myBox = { height: 6, width: 8, length: 10, volume: 480 ,
+material: "cardboard",
+contents: booksArray
+};
+
+alert(myBox.contents);
+
+myBox.contents.push("Great Day !");
+
+alert(myBox.contents);
+
+myBox["no of steps"]=2;
+
+alert(myBox["height"]);
+
+myBox.destination1 = "Orlando";
+
+alert(myBox.destination1);
+
+alert(myBox["no of steps"]);
+
+delete myBox["no of steps"];
+
+alert(myBox["no of steps"]);
+
+
+
+

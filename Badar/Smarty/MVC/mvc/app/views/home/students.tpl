@@ -65,7 +65,7 @@
 
                     </li>
                     <li>
-                        <a href="http://localhost/MVC/mvc/public/home/index" ><i class="fa fa-dashboard fa-fw"></i>Logout</a>
+                        <a href="http://localhost/MVC/mvc/public/home/logout" ><i class="fa fa-dashboard fa-fw"></i>Logout</a>
                     </li>
 
 
