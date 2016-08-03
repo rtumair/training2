@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="64b1a79c-fa5a-450e-929f-eb7d3b23d117" name="Default" comment="" />
+    <ignored path="MVC.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="MVC" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mvc/app/controllers/home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="204" column="27" selection-start-line="204" selection-start-column="27" selection-end-line="204" selection-end-column="27" />
+              <folding>
+                <element signature="n#index#0;n#Home#0;n#!!top" expanded="false" />
+                <element signature="n#students#0;n#Home#0;n#!!top" expanded="false" />
+                <element signature="n#Add#0;n#Home#0;n#!!top" expanded="false" />
+                <element signature="n#allStu#0;n#Home#0;n#!!top" expanded="false" />
+                <element signature="n#SelectOne#0;n#Home#0;n#!!top" expanded="false" />
+                <element signature="n#SelectPK#0;n#Home#0;n#!!top" expanded="false" />
+                <element signature="n#Delete#0;n#Home#0;n#!!top" expanded="false" />
+                <element signature="n#DeletebyPK#0;n#Home#0;n#!!top" expanded="false" />
+                <element signature="n#studentadd#0;n#Home#0;n#!!top" expanded="false" />
+                <element signature="n#EditStu#0;n#Home#0;n#!!top" expanded="false" />
+                <element signature="n#Edit#0;n#Home#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Editpage.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mvc/app/views/home/Editpage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="690">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding>
+                <marker date="1469698202741" expanded="true" signature="156:294" ph="..." />
+                <marker date="1469698202741" expanded="true" signature="160:294" ph="..." />
+                <marker date="1469698202741" expanded="true" signature="386:919" ph="..." />
+                <marker date="1469698202741" expanded="true" signature="668:914" ph="..." />
+                <marker date="1469698202741" expanded="true" signature="754:909" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Db_Criteria.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mvc/app/core/Db_Criteria.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="29" column="66" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
+              <folding>
+                <element signature="e#6#96#0#PHP" expanded="true" />
+                <element signature="n#ListStudents#0;n#DB_Criteria#0;n#!!top" expanded="false" />
+                <element signature="n#EditStud#0;n#DB_Criteria#0;n#!!top" expanded="false" />
+                <element signature="n#dbsearch#0;n#DB_Criteria#0;n#!!top" expanded="false" />
+                <element signature="n#dbsearch#0;n#DB_Criteria#0;n#!!top" expanded="false" />
+                <element signature="n#Deletedb#0;n#DB_Criteria#0;n#!!top" expanded="false" />
+                <element signature="n#Add#0;n#DB_Criteria#0;n#!!top" expanded="false" />
+                <element signature="e#2395#2526#0#PHP" expanded="false" />
+                <marker date="1469711475999" expanded="true" signature="285:299" ph="Select * fro... ${$tableName}" />
+                <marker date="1469711475999" expanded="true" signature="285:300" ph="Select * fro... $" />
+                <marker date="1469711475999" expanded="true" signature="635:652" ph="INSERT INTO ${$tablename}... " />
+                <marker date="1469711475999" expanded="true" signature="635:656" ph="UPDATE ${$ta... " />
+                <marker date="1469711475999" expanded="true" signature="1561:1595" ph="Select * fro... Student" />
+                <marker date="1469711475999" expanded="true" signature="1869:1903" ph="DELETE FROM " />
+                <marker date="1469711475999" expanded="true" signature="2148:2160" ph="INSERT INTO $... " />
+                <marker date="1469711475999" expanded="true" signature="2148:2171" ph="INSERT INTO ${$tablename}... " />
+                <marker date="1469711475999" expanded="true" signature="3042:3124" ph="INSERT INTO Student... " />
+                <marker date="1469711475999" expanded="true" signature="3042:3185" ph="INSERT INTO Student... " />
+                <marker date="1469711475999" expanded="true" signature="3042:3186" ph="INSERT INTO Student... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListPage.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mvc/app/views/home/ListPage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+              <folding>
+                <marker date="1469711734076" expanded="true" signature="564:702" ph="..." />
+                <marker date="1469711734076" expanded="true" signature="568:702" ph="..." />
+                <marker date="1469711734076" expanded="true" signature="797:1551" ph="..." />
+                <marker date="1469711734076" expanded="true" signature="856:901" ph="..." />
+                <marker date="1469711734076" expanded="true" signature="964:1001" ph="..." />
+                <marker date="1469711734076" expanded="true" signature="1083:1301" ph="..." />
+                <marker date="1469711734076" expanded="true" signature="1150:1296" ph="..." />
+                <marker date="1469711734076" expanded="true" signature="1305:1332" ph="..." />
+                <marker date="1469711734076" expanded="true" signature="1305:1546" ph="..." />
+                <marker date="1469711734076" expanded="true" signature="1392:1541" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/mvc/public/index.php" />
+        <option value="$PROJECT_DIR$/mvc/app/init.php" />
+        <option value="$PROJECT_DIR$/mvc/.htaccess" />
+        <option value="$PROJECT_DIR$/mvc/public/.htaccess" />
+        <option value="$PROJECT_DIR$/mvc/app/controllers/bla.php" />
+        <option value="$PROJECT_DIR$/mvc/app/controllers/contact.php" />
+        <option value="$PROJECT_DIR$/mvc/app/models/User.php" />
+        <option value="$PROJECT_DIR$/mvc/app/views/home/index.php" />
+        <option value="$PROJECT_DIR$/mvc/app/views/home/home.php" />
+        <option value="$PROJECT_DIR$/mvc/app/includes/config.php" />
+        <option value="$PROJECT_DIR$/mvc/app/core/Controller.php" />
+        <option value="$PROJECT_DIR$/mvc/app/core/App.php" />
+        <option value="$PROJECT_DIR$/mvc/app/views/home/students.php" />
+        <option value="$PROJECT_DIR$/mvc/app/core/Db_Connection.php" />
+        <option value="$PROJECT_DIR$/mvc/app/views/home/Editpage.php" />
+        <option value="$PROJECT_DIR$/mvc/app/views/home/AddStudent.php" />
+        <option value="$PROJECT_DIR$/mvc/app/models/Student.php" />
+        <option value="$PROJECT_DIR$/mvc/app/core/Db_Criteria.php" />
+        <option value="$PROJECT_DIR$/mvc/app/controllers/home.php" />
+        <option value="$PROJECT_DIR$/mvc/app/views/home/ListPage.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="1301" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MVC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MVC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MVC" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mvc" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MVC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MVC" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mvc" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MVC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MVC" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mvc" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mvc/app/views/home" />
+      <recent name="$PROJECT_DIR$/mvc/app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mvc/app/core" />
+      <recent name="$PROJECT_DIR$/mvc/app" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="64b1a79c-fa5a-450e-929f-eb7d3b23d117" name="Default" comment="" />
+      <created>1469511483288</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1469511483288</updated>
+      <workItem from="1469511484396" duration="857000" />
+      <workItem from="1469512394021" duration="14843000" />
+      <workItem from="1469595808900" duration="83000" />
+      <workItem from="1469596467036" duration="2011000" />
+      <workItem from="1469598816776" duration="14937000" />
+      <workItem from="1469687276793" duration="18420000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="51151000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="65" y="24" width="1301" height="744" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24980783" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/mvc/app/views/home/index.php</url>
+          <line>3</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="18" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/mvc/app/controllers/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+          <folding>
+            <element signature="e#6#96#0#PHP" expanded="false" />
+            <element signature="n#students#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#Add#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#allStu#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#SelectOne#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#SelectPK#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#Delete#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#DeletebyPK#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#EditStu#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#Edit#0;n#Home#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/core/App.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/models/Student.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#ListStu#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="n#Edit#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="n#Import#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="e#1664#2043#0#PHP" expanded="false" />
+            <element signature="n#Export#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="n#search#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="n#Delete#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="n#AddStu#0;n#Student#0;n#!!top" expanded="false" />
+            <marker date="1469711290842" expanded="true" signature="623:839" ph="UPDATE Stude... " />
+            <marker date="1469711290842" expanded="true" signature="1789:1909" ph="INSERT INTO Student... " />
+            <marker date="1469711290842" expanded="true" signature="2228:2249" ph="select * fro... Student" />
+            <marker date="1469711290842" expanded="true" signature="2865:3034" ph="INSERT INTO Student... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/views/home/ListPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+          <folding>
+            <marker date="1469711734076" expanded="true" signature="564:702" ph="..." />
+            <marker date="1469711734076" expanded="true" signature="568:702" ph="..." />
+            <marker date="1469711734076" expanded="true" signature="797:1551" ph="..." />
+            <marker date="1469711734076" expanded="true" signature="856:901" ph="..." />
+            <marker date="1469711734076" expanded="true" signature="964:1001" ph="..." />
+            <marker date="1469711734076" expanded="true" signature="1083:1301" ph="..." />
+            <marker date="1469711734076" expanded="true" signature="1150:1296" ph="..." />
+            <marker date="1469711734076" expanded="true" signature="1305:1332" ph="..." />
+            <marker date="1469711734076" expanded="true" signature="1305:1546" ph="..." />
+            <marker date="1469711734076" expanded="true" signature="1392:1541" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/core/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#96#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/controllers/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#96#0#PHP" expanded="false" />
+            <element signature="n#students#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#Add#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#allStu#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#SelectOne#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#SelectPK#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#Delete#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#DeletebyPK#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#EditStu#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#Edit#0;n#Home#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/core/App.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/core/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+          <folding>
+            <element signature="e#6#96#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/views/home/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/controllers/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+          <folding>
+            <element signature="e#6#96#0#PHP" expanded="false" />
+            <element signature="n#students#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#Add#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#allStu#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#SelectOne#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#SelectPK#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#Delete#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#DeletebyPK#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#EditStu#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#Edit#0;n#Home#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/core/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+          <folding>
+            <element signature="e#6#96#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/views/home/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/controllers/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#96#0#PHP" expanded="false" />
+            <element signature="n#students#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#Add#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#allStu#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#SelectOne#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#SelectPK#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#Delete#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#DeletebyPK#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#EditStu#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#Edit#0;n#Home#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/core/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+          <folding>
+            <element signature="e#6#96#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/views/home/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/core/init.php" />
+    <entry file="file://$PROJECT_DIR$/mvc/app/init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/controllers/bla.php" />
+    <entry file="file://$PROJECT_DIR$/mvc/app/controllers/contact.php" />
+    <entry file="file://$PROJECT_DIR$/mvc/app/models/.php" />
+    <entry file="file://$PROJECT_DIR$/mvc/composer.json" />
+    <entry file="file://$PROJECT_DIR$/mvc/public/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/core/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#96#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/views/home/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/core/Db_Connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+          <folding>
+            <element signature="n#DB_Con#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/views/home/students.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/includes/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/views/home/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/views/home/AddStudent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/includes/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="187" column="0" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
+          <folding>
+            <element signature="n#ListStu#0;n#!!top" expanded="false" />
+            <element signature="n#Edit#0;n#!!top" expanded="false" />
+            <element signature="n#Import#0;n#!!top" expanded="false" />
+            <element signature="n#Export#0;n#!!top" expanded="false" />
+            <element signature="n#search#0;n#!!top" expanded="false" />
+            <element signature="n#Delete#0;n#!!top" expanded="false" />
+            <element signature="n#AddStu#0;n#!!top" expanded="false" />
+            <marker date="1469510195000" expanded="true" signature="263:284" ph="Select * fro... Student" />
+            <marker date="1469510195000" expanded="true" signature="2893:3079" ph="UPDATE Stude... " />
+            <marker date="1469510195000" expanded="true" signature="3480:3600" ph="INSERT INTO Student... " />
+            <marker date="1469510195000" expanded="true" signature="3884:3905" ph="select * fro... Student" />
+            <marker date="1469510195000" expanded="true" signature="4267:4298" ph="Select * fro... Student" />
+            <marker date="1469510195000" expanded="true" signature="4505:4536" ph="DELETE FROM " />
+            <marker date="1469510195000" expanded="true" signature="4968:5107" ph="INSERT INTO Student... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/views/home/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/core/App.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/controllers/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="204" column="27" selection-start-line="204" selection-start-column="27" selection-end-line="204" selection-end-column="27" />
+          <folding>
+            <element signature="n#index#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#students#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#Add#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#allStu#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#SelectOne#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#SelectPK#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#Delete#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#DeletebyPK#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#studentadd#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#EditStu#0;n#Home#0;n#!!top" expanded="false" />
+            <element signature="n#Edit#0;n#Home#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/views/home/Editpage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <marker date="1469698202741" expanded="true" signature="156:294" ph="..." />
+            <marker date="1469698202741" expanded="true" signature="160:294" ph="..." />
+            <marker date="1469698202741" expanded="true" signature="386:919" ph="..." />
+            <marker date="1469698202741" expanded="true" signature="668:914" ph="..." />
+            <marker date="1469698202741" expanded="true" signature="754:909" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/models/Student.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+          <folding>
+            <element signature="n#ListStu#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="n#Edit#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="n#Import#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="e#1664#2043#0#PHP" expanded="false" />
+            <element signature="n#Export#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="n#search#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="n#Delete#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="n#AddStu#0;n#Student#0;n#!!top" expanded="false" />
+            <marker date="1469711290842" expanded="true" signature="623:839" ph="UPDATE Stude... " />
+            <marker date="1469711290842" expanded="true" signature="1789:1909" ph="INSERT INTO Student... " />
+            <marker date="1469711290842" expanded="true" signature="2228:2249" ph="select * fro... Student" />
+            <marker date="1469711290842" expanded="true" signature="2865:3034" ph="INSERT INTO Student... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/core/Db_Criteria.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="29" column="66" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
+          <folding>
+            <element signature="e#6#96#0#PHP" expanded="true" />
+            <element signature="n#ListStudents#0;n#DB_Criteria#0;n#!!top" expanded="false" />
+            <element signature="n#EditStud#0;n#DB_Criteria#0;n#!!top" expanded="false" />
+            <element signature="n#dbsearch#0;n#DB_Criteria#0;n#!!top" expanded="false" />
+            <element signature="n#dbsearch#0;n#DB_Criteria#0;n#!!top" expanded="false" />
+            <element signature="n#Deletedb#0;n#DB_Criteria#0;n#!!top" expanded="false" />
+            <element signature="n#Add#0;n#DB_Criteria#0;n#!!top" expanded="false" />
+            <element signature="e#2395#2526#0#PHP" expanded="false" />
+            <marker date="1469711475999" expanded="true" signature="285:299" ph="Select * fro... ${$tableName}" />
+            <marker date="1469711475999" expanded="true" signature="285:300" ph="Select * fro... $" />
+            <marker date="1469711475999" expanded="true" signature="635:652" ph="INSERT INTO ${$tablename}... " />
+            <marker date="1469711475999" expanded="true" signature="635:656" ph="UPDATE ${$ta... " />
+            <marker date="1469711475999" expanded="true" signature="1561:1595" ph="Select * fro... Student" />
+            <marker date="1469711475999" expanded="true" signature="1869:1903" ph="DELETE FROM " />
+            <marker date="1469711475999" expanded="true" signature="2148:2160" ph="INSERT INTO $... " />
+            <marker date="1469711475999" expanded="true" signature="2148:2171" ph="INSERT INTO ${$tablename}... " />
+            <marker date="1469711475999" expanded="true" signature="3042:3124" ph="INSERT INTO Student... " />
+            <marker date="1469711475999" expanded="true" signature="3042:3185" ph="INSERT INTO Student... " />
+            <marker date="1469711475999" expanded="true" signature="3042:3186" ph="INSERT INTO Student... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/app/views/home/ListPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+          <folding>
+            <marker date="1469711734076" expanded="true" signature="564:702" ph="..." />
+            <marker date="1469711734076" expanded="true" signature="568:702" ph="..." />
+            <marker date="1469711734076" expanded="true" signature="797:1551" ph="..." />
+            <marker date="1469711734076" expanded="true" signature="856:901" ph="..." />
+            <marker date="1469711734076" expanded="true" signature="964:1001" ph="..." />
+            <marker date="1469711734076" expanded="true" signature="1083:1301" ph="..." />
+            <marker date="1469711734076" expanded="true" signature="1150:1296" ph="..." />
+            <marker date="1469711734076" expanded="true" signature="1305:1332" ph="..." />
+            <marker date="1469711734076" expanded="true" signature="1305:1546" ph="..." />
+            <marker date="1469711734076" expanded="true" signature="1392:1541" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

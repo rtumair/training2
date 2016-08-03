@@ -1,0 +1,7 @@
+function testClosure ( ) {
+var x = 4;
+return x;
+}
+
+testClosure();
+x;
