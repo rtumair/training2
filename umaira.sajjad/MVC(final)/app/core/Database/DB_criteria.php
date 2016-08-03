@@ -90,21 +90,20 @@ class DB_criteria  {
         }
         $temp = rtrim($Insert_stmt, ' , ');
         $this -> Insert_stmt = $temp . ') ';
-
         if (in_array("user_id", $fields))
         {
             $value_stmt = '( NULL, ';
-
         } else {
             $value_stmt = '( ';
         }
-
         foreach ($values as $key => $value)
         {
             $value_stmt = $value_stmt . " '$value' " .",";
         }
         $temp = rtrim($value_stmt, ",");
         $this -> Value_stmt = $temp . ')';
+
+//        echo $this -> Value_stmt;
     }
 
     public function SetLimit($num)

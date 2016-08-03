@@ -30,6 +30,30 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
+        <style>
+            .black_overlay{
+                display: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                z-index:1001;
+                -moz-opacity: 0.8;
+                opacity:.80;
+                filter: alpha(opacity=80);
+            }
+
+            .white_content {
+                display: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: white;
+                z-index:1002;
+                overflow: auto;
+            }
+        </style>
+
     </head>
 
     <body>
@@ -80,6 +104,21 @@
                         <li>
                             <a href="/MVC/public/User/viewuser" ><i class="fa fa-dashboard fa-fw"></i> View Users</a>
                         </li>
+                        <li>
+                            <a href="/MVC/public/User/export" ><i class="fa fa-dashboard fa-fw"></i> Export user data </a>
+                        </li>
+                        {*<li>*}
+                            <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'"><i class="fa fa-dashboard fa-fw"></i> Import user data </a>
+                            <div id="light" class="white_content">
+                                <form enctype="multipart/form-data" role = "form" action= "/MVC/public/User/import" method='POST'>
+                                    <input size='50' type='file' name='filename'>
+                                    <input type='submit' name='submit' value='Save'>
+                                </form>
+                                <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"> Close </a>
+                            </div>
+                            <div id="fade" class="black_overlay"></div>
+
+                        {*</li>*}
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -87,6 +126,7 @@
             <!-- /.navbar-static-side -->
         </nav>
         <!-- jQuery -->
+
         <script src="/MVC/app/lib/sb-admin-clean/bower_components/jquery/dist/jquery.min.js"></script>
 
         <!-- Bootstrap Core JavaScript -->

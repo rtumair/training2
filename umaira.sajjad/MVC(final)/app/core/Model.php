@@ -18,38 +18,36 @@ class Model
     {
         $this -> db = new \DB\Database;
     }
-
-    public function authenticate($user_values)
+   
+    public function Create($user_values)
     {
-        
-        $Criteria =  new \DB\DB_criteria();
-        $Criteria -> SetSelect (['*']);
-        $Criteria-> WhereEquals($user_values, 'AND');
-
         $this -> db -> table_name = $this-> table_name;
-        $isSuccessful =  $this -> db -> Select($Criteria);
-
-        if (!empty($isSuccessful))
-        {
-            session_start();
-            $_SESSION['login_user'] = $user_values["user_email"];
-        }
-         return $isSuccessful;
+        $Criteria =  new \DB\DB_criteria();
+        $Criteria-> SetInsert($this-> column_fields, $user_values);
+        
+        $isSuccessful =  $this -> db -> Insert($Criteria);
+        return $isSuccessful;
     }
 
-    public function ViewAll()
+    public function Read()
     {
         $this -> db -> table_name = $this-> table_name;
         $Criteria =  new \DB\DB_criteria();
-        $Criteria-> SetLimit('2');
+//        $Criteria-> SetLimit('2');
+
         $response = $this -> db -> SelectAll($Criteria);
         return $response;
     }
 
-    public function Create($user_values)
+    public function Update($id, $set_arr)
     {
+        $where_array = ['user_id' => $id];
+        $Criteria =  new \DB\DB_criteria();
+        $Criteria -> Set('=', $set_arr);
+        $Criteria-> WhereEquals($where_array, 'AND');
         $this -> db -> table_name = $this-> table_name;
-        $isSuccessful =  $this -> db -> Insert($this-> column_fields, $user_values);
+
+        $isSuccessful = $this -> db -> Update($Criteria);
         return $isSuccessful;
     }
 
@@ -64,16 +62,5 @@ class Model
         $isSuccessful =  $this -> db -> Delete($Criteria);
         return $isSuccessful;
     }
-
-    public function Update($id, $set_arr)
-    {
-        $where_array = ['user_id' => $id];
-        $Criteria =  new \DB\DB_criteria();
-        $Criteria -> Set('=', $set_arr);
-        $Criteria-> WhereEquals($where_array, 'AND');
-        $this -> db -> table_name = $this-> table_name;
-
-        $isSuccessful = $this -> db -> Update($Criteria);
-        return $isSuccessful;
-    }
+        
 }

@@ -51,7 +51,7 @@ class DB_criteriaTest extends PHPUnit_Framework_TestCase
         // INNER JOIN Customers
         // ON Orders.CustomerID=Customers.CustomerID;
         $table1 = 'user';
-        $table2 = 'student';
+        $table2 = 'Student';
         $fktable1 = 'user_id';
         $fktable2 = 'id';
         

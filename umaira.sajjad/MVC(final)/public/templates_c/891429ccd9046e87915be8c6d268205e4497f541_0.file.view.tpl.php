@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-08-02 05:52:36
+/* Smarty version 3.1.29, created on 2016-08-03 09:30:55
   from "/var/www/html/MVC/app/views/User/view.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57a03524804b85_80599582',
+  'unifunc' => 'content_57a1b9cf1519a2_40690728',
   'file_dependency' => 
   array (
     '891429ccd9046e87915be8c6d268205e4497f541' => 
     array (
       0 => '/var/www/html/MVC/app/views/User/view.tpl',
-      1 => 1470045295,
+      1 => 1470215447,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:/var/www/html/MVC/app/views/layouts/footer.tpl' => 1,
   ),
 ),false)) {
-function content_57a03524804b85_80599582 ($_smarty_tpl) {
+function content_57a1b9cf1519a2_40690728 ($_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:/var/www/html/MVC/app/views/layouts/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -45,6 +45,7 @@ $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:/var/www/htm
                         <h1> User Information! <h1>
                     </div>
                     <!-- /.panel-heading -->
+
                     <div class="panel-body">
                         <div class="table-responsive">
                             <table class="table table-hover">>

@@ -16,6 +16,7 @@ class StudentController extends Controller
 
         parent::__construct();
         session_start();
-        $this->user = $this->model('Student');
+        $this-> student = $this->model('Student');
+        $this -> controller_name = 'Student';
     }
 }
