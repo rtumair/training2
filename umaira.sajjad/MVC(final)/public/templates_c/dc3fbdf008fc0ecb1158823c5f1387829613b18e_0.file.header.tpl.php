@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-08-02 05:51:17
+/* Smarty version 3.1.29, created on 2016-08-03 10:48:11
   from "/var/www/html/MVC/app/views/layouts/header.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57a034d55119f2_15861779',
+  'unifunc' => 'content_57a1cbebd8b152_39827180',
   'file_dependency' => 
   array (
     'dc3fbdf008fc0ecb1158823c5f1387829613b18e' => 
     array (
       0 => '/var/www/html/MVC/app/views/layouts/header.tpl',
-      1 => 1470117022,
+      1 => 1470221236,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_57a034d55119f2_15861779 ($_smarty_tpl) {
+function content_57a1cbebd8b152_39827180 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,6 +56,30 @@ function content_57a034d55119f2_15861779 ($_smarty_tpl) {
  src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"><?php echo '</script'; ?>
 >
         <![endif]-->
+
+        <style>
+            .black_overlay{
+                display: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                z-index:1001;
+                -moz-opacity: 0.8;
+                opacity:.80;
+                filter: alpha(opacity=80);
+            }
+
+            .white_content {
+                display: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: white;
+                z-index:1002;
+                overflow: auto;
+            }
+        </style>
 
     </head>
 
@@ -105,11 +129,23 @@ function content_57a034d55119f2_15861779 ($_smarty_tpl) {
                             <a href="/MVC/public/User/add_helper"> <i class="fa fa-dashboard fa-fw"></i> Add User</a>
                         </li>
                         <li>
-                            <a href="/MVC/public/User/search_helper"> <i class="fa fa-dashboard fa-fw"></i> Search </a>
-                        </li>
-                        <li>
                             <a href="/MVC/public/User/viewuser" ><i class="fa fa-dashboard fa-fw"></i> View Users</a>
                         </li>
+                        <li>
+                            <a href="/MVC/public/User/export" ><i class="fa fa-dashboard fa-fw"></i> Export user data </a>
+                        </li>
+                        
+                            <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'"><i class="fa fa-dashboard fa-fw"></i> Import user data </a>
+                            <div id="light" class="white_content">
+                                <form enctype="multipart/form-data" role = "form" action= "/MVC/public/User/import" method='POST'>
+                                    <input size='50' type='file' name='filename'>
+                                    <input type='submit' name='submit' value='Save'>
+                                </form>
+                                <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"> Close </a>
+                            </div>
+                            <div id="fade" class="black_overlay"></div>
+
+                        
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -117,6 +153,7 @@ function content_57a034d55119f2_15861779 ($_smarty_tpl) {
             <!-- /.navbar-static-side -->
         </nav>
         <!-- jQuery -->
+
         <?php echo '<script'; ?>
  src="/MVC/app/lib/sb-admin-clean/bower_components/jquery/dist/jquery.min.js"><?php echo '</script'; ?>
 >

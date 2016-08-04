@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-08-02 05:37:12
+/* Smarty version 3.1.29, created on 2016-08-03 10:20:06
   from "/var/www/html/MVC/app/views/home/login.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57a031885042e0_59925640',
+  'unifunc' => 'content_57a1c55687ffb6_06557102',
   'file_dependency' => 
   array (
     '3274e1140077121936bf44591c8693089e3cb21c' => 
     array (
       0 => '/var/www/html/MVC/app/views/home/login.tpl',
-      1 => 1470116231,
+      1 => 1470218779,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_57a031885042e0_59925640 ($_smarty_tpl) {
+function content_57a1c55687ffb6_06557102 ($_smarty_tpl) {
 ?>
 
 <!DOCTYPE html>
@@ -76,11 +76,11 @@ function content_57a031885042e0_59925640 ($_smarty_tpl) {
                                 <input class="form-control" placeholder="name@gmail.com" name="u_name" type="email" autofocus>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="*****"name="u_pass" type="password" value="">
+                                <input class="form-control" placeholder="*****" name="u_pass" type="password" value="">
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                    <input name="remember" type="checkbox" value="Remember Me" >Remember Me
                                 </label>
                             </div>
                             <!-- Change this to a button or input when using this as a form -->

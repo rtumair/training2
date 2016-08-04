@@ -18,7 +18,6 @@ class Database {
     //-----connection variables------//
 
     private $db_conn;
-    private $stmt;
     private static $instance;
     
     
@@ -29,7 +28,6 @@ class Database {
         $dbname = "user";
 
         try {
-            # MySQL with PDO_MYSQL
             $this->db_conn = new \PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
         } catch (\PDOException $e) {
@@ -49,6 +47,7 @@ class Database {
     {
         return $this-> db_conn;
     }
+    
     public function return_query_data($query)
     {
        // echo $query;
@@ -65,9 +64,10 @@ class Database {
         }
         return $table_data_array;
     }
+    
     public function rowCount($query)
     {
-        // echo $query;
+//         echo $query;
         $response = $this -> db_conn -> query($query);
         return $response ->rowCount();
     }
@@ -113,7 +113,6 @@ class Database {
     public function Insert($Criteria)
     {
         $query = "INSERT INTO " . $this-> table_name. ' '. $Criteria->Insert_stmt. " VALUES " . $Criteria->Value_stmt;
-
         return $this-> rowCount($query);
     }
 

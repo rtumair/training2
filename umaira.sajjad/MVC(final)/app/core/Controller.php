@@ -8,19 +8,23 @@
 class Controller
 {
     public $viewManager;
+    public $controller_name;
+    public $model;
     
     public function __construct()
     {
-       $this->viewManager = new ViewManager();
-
+       $this->viewManager = new ViewManager();        
     }
+
     public function model($model)
     {
-        $model = $model.'Model';
-        require_once '../app/models/'. $model.'.php';
-        return new $model();
+        require_once ("../app/models/". $model . 'Model.php');
+        $model = $model . 'Model';
+        $this->model = new $model;
+        return $this->model;
     }
-    public function view($view, $data = [])
+
+    public function view($view)
     {
         require_once '../app/views/' .$view.'.php';
     }
@@ -28,202 +32,30 @@ class Controller
 
     public function viewuser()
     {
-        $this-> viewManager -> addParams('tabledata', $this->user->ViewAll());
-        $this-> viewManager->render('/User/view','User');
+        $this-> viewManager -> addParams('tabledata', $this-> model-> Read());
+        $this-> viewManager->render('/'.$this->controller_name.'/view', $this-> controller_name);
     }
 
     public function logout()
     {
         session_destroy();
+
+        setcookie('login_user','',time()-3600, '/');
+
         header('Location: http://localhost/MVC/public');
     }
-
-    public function login()
-    {
-        if(isset($_POST['login']))
-        {
-            $data_missing = array();
-
-            if(empty($_POST['u_name'])){
-                $data_missing[] = 'username';
-            } else {
-                $email = trim($_POST['u_name']);
-            }
-            if(empty($_POST['u_pass'])){
-                $data_missing[] = 'password';
-            } else {
-                $u_pass = trim($_POST['u_pass']);
-            }
-
-            if(empty($data_missing))
-            {
-                $is_successful = $this->user->authenticate([
-                    'user_email' => $email,
-                    'password' => $u_pass
-                ]);
-                if (!empty($is_successful))
-                {
-                    header('Location: http://localhost/MVC/public');
-                } else {
-                    echo 'could not redirect';
-                }
-
-            } else {
-                echo 'You need to enter the following data<br />';
-
-                foreach($data_missing as $missing)
-                {
-
-                    echo "$missing<br />";
-
-                }
-            }
-
-
-        }
-    }
-
+       
     public function add_helper()
     {
-        $this->viewManager->render( '/User/add','User');
-
-    }
-    public function add()
-    {
-        if(isset($_POST['submit']))
-        {
-            $data_missing = array();
-
-            if(empty($_POST['u_name'])){
-                $data_missing[] = 'username';
-            } else {
-                $u_name = trim($_POST['u_name']);
-            }
-            if(empty($_POST['u_city'])){
-                $data_missing[] = 'city';
-            } else {
-                $city = trim($_POST['u_city']);
-            }
-            if(empty($_POST['email'])){
-                $data_missing[] = 'Email';
-            } else {
-                $email = trim($_POST['email']);
-            }
-
-            if(empty($_POST['u_pass'])){
-                $data_missing[] = 'password';
-            } else {
-                $u_pass = trim($_POST['u_pass']);
-            }
-
-
-            if(empty($data_missing))
-            {
-                $is_successful =  $this->user-> Create([
-                    'user_name' => $u_name,
-                    'user_city' => $city,
-                    'password' => $u_pass,
-                    'user_email' => $email
-                ]);
-                if ($is_successful)
-                {
-                    // redirect to index view and print Student added;
-                    header('Location: http://localhost/MVC/public');
-                } else {
-                    // print error
-                    echo 'could not redirect';
-                }
-
-            } else {
-
-                echo 'You need to enter the following data<br />';
-
-                foreach($data_missing as $missing){
-
-                    echo "$missing<br />";
-
-                }
-
-            }
-
-        }
-    }
-    public function update($row_id) {
-        // echo 'CALL ME!!!';
-
-        if(isset($_POST['submit'])){
-
-            $data_missing = array();
-
-            if(empty($_POST['u_name'])){
-                $data_missing[] = 'username';
-            } else {
-                $u_name = trim($_POST['u_name']);
-            }
-            if(empty($_POST['u_city'])){
-                $data_missing[] = 'city';
-            } else {
-                $u_city = trim($_POST['u_city']);
-            }
-            if(empty($_POST['email'])){
-                $data_missing[] = 'Email';
-            } else {
-                $email = trim($_POST['email']);
-            }
-
-            if(empty($_POST['u_pass'])){
-                $data_missing[] = 'password';
-            } else {
-                $u_pass = trim($_POST['u_pass']);
-            }
-
-            if(empty($data_missing)){
-
-                $is_successful = $this->user->Update( $row_id ,[
-                    'user_name' => $u_name,
-                    'user_city' => $u_city,
-                    'password' => $u_pass,
-                    'user_email' => $email
-                ]);
-                if ($is_successful)
-                {
-                    // redirect to index view and print Student added;
-                    header('Location: http://localhost/MVC/public');
-                } else {
-                    // print error
-                    echo 'could not redirect';
-                }
-
-            } else {
-
-                $this->alert_dialog('Missing Fields');
-
-                foreach($data_missing as $missing){
-
-                    echo "$missing<br />";
-
-                }
-
-            }
-
-        }
-    }
+        $this->viewManager->render('/'.$this->controller_name.'/add', $this-> controller_name);
+    }   
+    
 
     public function update_helper()
     {
         $this->viewManager->addParams('rowID', $_GET['rowID']);
-        $this->viewManager->render('/User/update','User');
+        $this->viewManager->render('/'.$this->controller_name.'/update', $this-> controller_name);
     }
 
-    public function delete()
-    {
-        //  echo 'delete User'. $_GET['rowID'];
-        $is_successful = $this->user->Delete($_GET['rowID']);
-        if ($is_successful)        {
-            header('Location: http://localhost/MVC/public');
-        } else {
-            // print error
-            echo 'could not redirect';
-        }
-    }
+   
 }

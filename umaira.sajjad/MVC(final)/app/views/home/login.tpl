@@ -49,11 +49,11 @@
                                 <input class="form-control" placeholder="name@gmail.com" name="u_name" type="email" autofocus>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="*****"name="u_pass" type="password" value="">
+                                <input class="form-control" placeholder="*****" name="u_pass" type="password" value="">
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                    <input name="remember" type="checkbox" value="Remember Me" >Remember Me
                                 </label>
                             </div>
                             <!-- Change this to a button or input when using this as a form -->
